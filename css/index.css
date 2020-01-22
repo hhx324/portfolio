@@ -1,0 +1,410 @@
+@charset "UTF-8";
+/* 폰트 설정 */
+font-face {
+  font-family: star;
+  font-weight: 400;
+  src: url("../font/Starjedi.otf.eot");
+  src: local("※"), url("../font/Starjedi.woff") format("woff"), url("../font/Starjedi.otf") format("opentype"); }
+
+font-face {
+  font-family: smile;
+  font-weight: 400;
+  src: local("※"), url("../font/BinggraeMelona.woff") format("woff"), url("../font/BinggraeMelona.otf") format("opentype"); }
+
+font-face {
+  font-family: smile;
+  font-weight: 600;
+  src: url("../font/BinggraeMelonBold.otf.eot");
+  src: local("※"), url("../font/BinggraeMelona-Bold.woff") format("woff"), url("../font/BinggraeMelona.otf") format("opentype"); }
+
+/* tagreset */
+* {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4 {
+  font-size: 100%; }
+
+ul, li {
+  list-style: none; }
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: inherit; }
+
+img {
+  vertical-align: top;
+  border: none;
+  max-width: 100%; }
+
+address {
+  font-style: normal; }
+
+button {
+  border: none;
+  background: none; }
+
+header, nav, section, article, footer {
+  display: block; }
+
+/* common class */
+.p_r {
+  position: relative; }
+
+.p_a {
+  position: absolute; }
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.sr-only {
+  position: absolute;
+  top: 0;
+  left: -9999px; }
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: smile;
+  font-weight: 400;
+  font-size: 16px; }
+
+.area {
+  width: 100%;
+  height: 100%; }
+
+/* skip  */
+#skip a {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  z-index: 1000; }
+
+#skip a:focus {
+  left: 0;
+  width: 100%;
+  text-align: center;
+  height: 3rem;
+  line-height: 3rem;
+  background: #000;
+  color: #fff;
+  font-size: 1.5rem; }
+
+/* header */
+#header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  z-index: 1000; }
+  #header .btn_menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%; }
+    #header .btn_menu .line {
+      position: absolute;
+      left: 10%;
+      width: 20%;
+      height: 0.7rem;
+      background: #000; }
+    #header .btn_menu .top {
+      top: 10%; }
+    #header .btn_menu .mid {
+      top: 40%; }
+    #header .btn_menu .btm {
+      top: 70%; }
+  #header #gnb {
+    visibility: hidden; }
+
+/* cnt1 */
+#content {
+  width: 100%;
+  height: 100%;
+  color: #fff; }
+
+#cnt1 {
+  position: relative;
+  height: 1080px;
+  width: 100%;
+  background-image: url("../images/cnt1/bg.png");
+  box-sizing: border-box; }
+
+.portfolio {
+  top: 30%;
+  left: 15%;
+  animation: star 10s ease-out; }
+
+.foryou {
+  top: 50%;
+  left: 15%;
+  animation: wars 10s ease-out; }
+
+.byline {
+  font-family: star;
+  top: 48%;
+  left: 45%;
+  animation: move-byline 10s linear; }
+  .byline span {
+    display: inline-block;
+    animation: spin-letters 10s linear; }
+
+@keyframes star {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(-0.75em); }
+  20% {
+    opacity: 1; }
+  89% {
+    opacity: 1;
+    transform: scale(1); }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em); } }
+@keyframes wars {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(0.5em); }
+  20% {
+    opacity: 1; }
+  90% {
+    opacity: 1;
+    transform: scale(1); }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em); } }
+@keyframes spin-letters {
+  0%, 10% {
+    opacity: 0;
+    transform: rotateY(90deg); }
+  30% {
+    opacity: 1; }
+  70%, 86% {
+    transform: rotateY(0);
+    opacity: 1; }
+  95%, 100% {
+    opacity: 0; } }
+@keyframes move-byline {
+  0% {
+    transform: translateZ(5em); }
+  100% {
+    transform: translateZ(0); } }
+/* cnt2 */
+#cnt2 {
+  width: 100%;
+  height: 2045px;
+  background-image: url("../images/cnt2/bg.png");
+  overflow: hidden;
+  z-index: -1; }
+  #cnt2 .moon {
+    bottom: 12%;
+    right: -10%;
+    z-index: 1; }
+  #cnt2 h2 {
+    bottom: 15%;
+    left: 3%;
+    color: #ffff99;
+    font-family: smile;
+    font-weight: 600;
+    font-size: 7.5rem;
+    line-height: 7.5rem; }
+
+.cloud {
+  bottom: 20%;
+  left: -10%;
+  z-index: 0;
+  animation: cloud 50s linear infinite; }
+
+@keyframes cloud {
+  0% {
+    opacity: .7;
+    transform: translateX(0em); }
+  25% {
+    opacity: .8;
+    transform: translateX(3em); }
+  50% {
+    opacity: 1;
+    transform: translateX(5em); }
+  75% {
+    opacity: .8;
+    transform: translateX(3em); }
+  100% {
+    opacity: .6;
+    transform: translateX(0em); } }
+.moonshadow1 {
+  bottom: -2%;
+  right: 0;
+  animation: moonshadow1 4s linear infinite; }
+
+@keyframes moonshadow1 {
+  0% {
+    opacity: 1;
+    transform: translateY(0em); }
+  15% {
+    transform: translateY(0.5em); }
+  30% {
+    transform: translateY(1em); }
+  45% {
+    opacity: .2;
+    transform: translateY(0.5em); }
+  60% {
+    transform: translateY(1em); }
+  70% {
+    transform: translateY(0.5em); }
+  100% {
+    opacity: 1;
+    transform: translateY(0em); } }
+.moonshadow2 {
+  bottom: -2%;
+  right: 0;
+  opacity: 0.7;
+  animation: moonshadow2 4s linear infinite; }
+
+@keyframes moonshadow2 {
+  0% {
+    opacity: 1;
+    transform: translateX(0em); }
+  15% {
+    transform: translateX(1em); }
+  30% {
+    transform: translateX(0em); }
+  45% {
+    opacity: .2;
+    transform: translateX(1em); }
+  60% {
+    transform: translateX(0em); }
+  70% {
+    transform: translateX(1em); }
+  100% {
+    opacity: 1;
+    transform: translateX(0em); } }
+.star1 {
+  top: 15%;
+  right: 0;
+  z-index: -1;
+  animation: star1 2s linear infinite; }
+
+.star2 {
+  top: 0;
+  right: 0;
+  z-index: -1;
+  animation: star2 3s linear infinite; }
+
+@keyframes star1 {
+  0% {
+    opacity: 0;
+    transform: translateX(0em) translatey(0em); }
+  10% {
+    transform: translateX(-10em) translatey(10em); }
+  20% {
+    transform: translateX(-20em) translatey(20em); }
+  30% {
+    opacity: .2;
+    transform: translateX(-30em) translatey(30em); }
+  40% {
+    transform: translateX(-40em) translatey(40em); }
+  50% {
+    transform: translateX(-50em) translatey(50em); }
+  60% {
+    opacity: .1;
+    transform: translateX(-60em) translatey(60em); }
+  70% {
+    transform: translateX(-70em) translatey(70em); }
+  80% {
+    transform: translateX(-80em) translatey(80em); }
+  90% {
+    transform: translateX(-90em) translatey(90em); }
+  100% {
+    opacity: 0;
+    transform: translateX(-100em) translatey(100em); } }
+@keyframes star2 {
+  0% {
+    opacity: 0;
+    transform: translateX(0em) translatey(0em); }
+  50% {
+    opacity: .3;
+    transform: translateX(-100em) translatey(50em); }
+  100% {
+    opacity: 0;
+    transform: translateX(-200em) translatey(100em); } }
+/* cnt3 */
+#cnt3 {
+  width: 100%;
+  height: 1080px;
+  background: #3161c1;
+  display: table; }
+  #cnt3 .hello {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 4rem;
+    font-family: "smile";
+    font-weight: 600; }
+  #cnt3 #main-ctr {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
+  #cnt3 .content {
+    border: 1px solid black;
+    display: inline-block;
+    position: relative; }
+  #cnt3 svg {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9); }
+    #cnt3 svg #smile-up,
+    #cnt3 svg #circle,
+    #cnt3 svg #eye-to-left,
+    #cnt3 svg #eye-to-right,
+    #cnt3 svg #wink,
+    #cnt3 svg #bg {
+      visibility: hidden; }
+
+/* cnt4 */
+#cnt4 {
+  background: linear-gradient(#3161c1, #ffcccc);
+  width: 100%;
+  overflow-x: hidden;
+  height: auto; }
+
+.cntwrap {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  /* 가로크기는 스크립트에서도 가능함 */ }
+  .cntwrap.fix {
+    position: fixed; }
+  .cntwrap > ul {
+    position: relative;
+    top: 80%;
+    margin-top: -300px;
+    margin-left: 0;
+    width: 5000px;
+    height: 600px; }
+    .cntwrap > ul > li {
+      float: left;
+      width: 1000px;
+      height: 600px;
+      line-height: 600px; }
+    .cntwrap > ul li:nth-child(odd) {
+      background: aqua; }
+    .cntwrap > ul li:nth-child(even) {
+      background: coral; }
+
+/* 기본 relative */
+/* 가로 스크롤로 보여질 영역에서는 fixed로 고정시키기 */
+/* cnt5 */
+#cnt5 {
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  z-index: 1000; }
+
+/*# sourceMappingURL=index.css.map */
