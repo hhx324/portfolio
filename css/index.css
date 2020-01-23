@@ -664,7 +664,6 @@ body {
     position: fixed;
     bottom: 25%;
     left: 35%;
-    z-index: -2;
     -webkit-animation: bloom 10s alternate infinite;
     -moz-animation: bloom 10s alternate infinite;
     -o-animation: bloom 10s alternate infinite;
@@ -948,7 +947,7 @@ body {
   z-index: 1000;
   color: #FFF;
   background: linear-gradient(#fcc, #cff);
-  /* background-image:url("../images/cnt5/cloud.png"); */ }
+  background-image: url("../images/cnt5/cloud.png"); }
   #cnt5 .bigstudio {
     top: 20%;
     right: 5%;
@@ -1101,5 +1100,10 @@ body {
     opacity: 1; }
   100% {
     opacity: .1; } }
+/* cnt6 */
+#cnt6 {
+  width: 100%;
+  height: 8163px;
+  background: url("../images/common/큰화면-작업.png"); }
 
 /*# sourceMappingURL=index.css.map */

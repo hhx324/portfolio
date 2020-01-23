@@ -186,7 +186,7 @@ span {display: inline-block;@include animation(spin-letters 10s linear);}}
 #cnt4{
     background: linear-gradient(#3161c1,#ffcccc);
     position: relative;z-index: -2;
-    #cnt4-1{position: fixed;bottom: 25%;left: 35%;z-index: -2;@include animation(bloom 10s alternate infinite);
+    #cnt4-1{position: fixed;bottom: 25%;left: 35%;@include animation(bloom 10s alternate infinite);
         li:nth-of-type(1){@include transform(scale(.8));}
         li:nth-of-type(2){position: absolute;top: 2rem;left: -1rem;@include transform(scale(.75));@include animation(bloom-1 5s alternate infinite)}
         li:nth-of-type(3){position: absolute;top: 23.5rem;left: 6.5rem;@include animation(fire 10s alternate infinite);z-index:-3;}
@@ -278,7 +278,7 @@ span {display: inline-block;@include animation(spin-letters 10s linear);}}
 
 /* cnt5 */
 #cnt5{
-    width: 100%;height: 2000px;position:relative;z-index: 1000;color: #FFF;background: linear-gradient(#fcc,#cff);/* background-image:url("../images/cnt5/cloud.png"); */
+    width: 100%;height: 2000px;position:relative;z-index: 1000;color: #FFF;background: linear-gradient(#fcc,#cff); background-image:url("../images/cnt5/cloud.png"); 
     .bigstudio{top: 20% ;right: 5%;width: 1183px;height: 900px;background: url("../images/cnt5/스튜디오\(빅\).png");
     li{position: absolute;
     &.choice{opacity: 1;}
@@ -326,3 +326,6 @@ span {display: inline-block;@include animation(spin-letters 10s linear);}}
     60%{opacity: 1;}
     100%{opacity: .1;}
 }
+
+/* cnt6 */
+#cnt6{width: 100%;height: 8163px;background: url("../images/common/큰화면-작업.png");}
