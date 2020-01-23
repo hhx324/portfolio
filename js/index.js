@@ -81,15 +81,13 @@ tl
     opacity: 0
   })
 
-// copy
-balapaCop("Windows Hello Animation", "rgba(255,255,255,.8)");
 
 /* cnt4 */
 
 var scrollT;
-var moveOffsetT = $('#cnt4').offset().top;						//#cnt3의 수직 전역위치
-var horTotal = $('#cnt4 .cntwrap > ul > li').length;			//#cnt3 .cntwrap > ul > li의 전체개수
-var moveBoxWid = $('#cnt4 .cntwrap > ul > li').outerWidth();	//#cnt3 .cntwrap > ul > li 하나의 너비
+var moveOffsetT = $('#cnt4-2').offset().top;						//#cnt3의 수직 전역위치
+var horTotal = $('#cnt4-2 .cntwrap > ul > li').length;			//#cnt3 .cntwrap > ul > li의 전체개수
+var moveBoxWid = $('#cnt4-2 .cntwrap > ul > li').outerWidth();	//#cnt3 .cntwrap > ul > li 하나의 너비
 var validate = moveBoxWid * (horTotal - 1);						//가로로 움직일수 있는 유효한 거리	
 
 //문서가 로딩되면 하단에 padding-bottom 선언하고 시작된다
@@ -100,27 +98,71 @@ $(window).on('scroll', function () {
   //console.log(scrollT);
 
   //상단영역
-  if (scrollT < $('#cnt4').offset().top) {
-    $('#cnt4').css({paddingTop: 0, paddingBottom: validate}).children().removeClass('fix');
+  if (scrollT < $('#cnt4-2').offset().top) {
+    $('#cnt4-2').css({paddingTop: 0, paddingBottom: validate}).children().removeClass('fix');
   }
   //fixed로 고정영역 : 가로 스크롤이동이 되는 영역
   else if (scrollT < $('#cnt5').offset().top) {  //마지막 컨텐츠는 왼쪽으로 사라지면 안된다(- moveBoxWid)
-      $('#cnt4').css({paddingTop: 0, paddingBottom: validate}).children().addClass('fix');
+      $('#cnt4-2').css({paddingTop: 0, paddingBottom: validate}).children().addClass('fix');
 
       /* https://greensock.com/tweenmax/
       TweenMax.to('html, body', 1, {scrollTop: 200, ease:Power1.easeOut});
         첫 번째 파라미터는 트윈 할 대상(Target)입니다. 
         두 번째 파라미터는 초 단위의 지속시간(duration), 
         세 번째는 속성(Properties)인데, 대상이 기존에 가지고 있던 속성 값과는 다른, 변화 된 값(End values)이어야 합니다. */
-      TweenMax.to('#cnt4 .cntwrap > ul', 0.6, {marginLeft: -(scrollT-moveOffsetT), ease:Power1.easeOut});
+      TweenMax.to('#cnt4-2 .cntwrap > ul', 0.6, {marginLeft: -(scrollT-moveOffsetT), ease:Power1.easeOut});
   }
   //하단영역
   else {
-    $('#cnt4').css({paddingTop: validate, paddingBottom: 0}).children().removeClass('fix');
+    $('#cnt4-2').css({paddingTop: validate, paddingBottom: 0}).children().removeClass('fix');
   }
 
   
 });	//scroll
 
 
+/* #cnt5 bigstudio bs-big bs-small smallstudio ss-title ss-button*/
+
+$('.bigstudio .bs-big button').eq(0).on('click', function () {
+$('.bs-small li').eq(0).toggleClass('f').siblings().removeClass('f');
+$('.smallstudio .ss-title li').eq(0).toggleClass('f').siblings().removeClass('f');
 });
+$('.bigstudio .bs-big button').eq(1).on('click', function () {
+$('.bs-small li').eq(1).toggleClass('f').siblings().removeClass('f');
+$('.smallstudio .ss-title li').eq(1).toggleClass('f').siblings().removeClass('f');
+});
+$('.bigstudio .bs-big button').eq(2).on('click', function () {
+$('.bs-small li').eq(2).toggleClass('f').siblings().removeClass('f');
+$('.smallstudio .ss-title li').eq(2).toggleClass('f').siblings().removeClass('f');
+});
+$('.bigstudio .bs-big button').eq(3).on('click', function () {
+$('.bs-small li').eq(3).toggleClass('f').siblings().removeClass('f');
+$('.smallstudio .ss-title li').eq(3).toggleClass('f').siblings().removeClass('f');
+});
+$('.bigstudio .bs-big button').eq(4).on('click', function () {
+$('.bs-small li').eq(4).toggleClass('f').siblings().removeClass('f');
+$('.smallstudio .ss-title li').eq(4).toggleClass('f').siblings().removeClass('f');
+});
+$('.ss-button li button').eq(0).on('click', function () {
+$('.bs-small li').eq(0).toggleClass('f').siblings().removeClass('f');
+$('.smallstudio .ss-title li').eq(0).toggleClass('f').siblings().removeClass('f');
+});
+$('.ss-button li button').eq(1).on('click', function () {
+$('.bs-small li').eq(1).toggleClass('f').siblings().removeClass('f');
+$('.smallstudio .ss-title li').eq(1).toggleClass('f').siblings().removeClass('f');
+});
+$('.ss-button li button').eq(2).on('click', function () {
+$('.bs-small li').eq(2).toggleClass('f').siblings().removeClass('f');
+$('.smallstudio .ss-title li').eq(2).toggleClass('f').siblings().removeClass('f');
+});
+$('.ss-button li button').eq(3).on('click', function () {
+$('.bs-small li').eq(3).toggleClass('f').siblings().removeClass('f');
+$('.smallstudio .ss-title li').eq(3).toggleClass('f').siblings().removeClass('f');
+});
+$('.ss-button li button').eq(4).on('click', function () {
+$('.bs-small li').eq(4).toggleClass('f').siblings().removeClass('f');
+$('.smallstudio .ss-title li').eq(4).toggleClass('f').siblings().removeClass('f');
+});
+});
+
+  

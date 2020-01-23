@@ -5,3 +5,21 @@
     -ms-transform: $value;
     transform: $value;
 }
+
+@mixin animation($value...) {
+    -webkit-animation : $value;
+    -moz-animation : $value;
+    -o-animation : $value;
+    animation : $value;
+}
+@mixin keyframes($value...) {
+    @-webkit-keyframes #{$value} {
+        @content;
+    }
+    @-moz-keyframes #{$value} {
+        @content;
+    }
+    @keyframes #{$value} {
+        @content;
+    }
+}
