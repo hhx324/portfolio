@@ -148,8 +148,9 @@ span {display: inline-block;@include animation(spin-letters 10s linear);}}
 
 /* cnt3 */
 #cnt3{
-    width: 100%;height: 2000px;background: #3161c1;
+    width: 100%;height: 2000px;background: #3161c1;position: relative;
     display: table;background-image: url("../images/cnt4/cloud2.png");
+    >div{position: absolute;top: 20%;left: 35%;}
     .hello {
         color: white;
         letter-spacing: 2px;
@@ -278,7 +279,7 @@ span {display: inline-block;@include animation(spin-letters 10s linear);}}
 
 /* cnt5 */
 #cnt5{
-    width: 100%;height: 2000px;position:relative;z-index: 1000;color: #FFF;background: linear-gradient(#fcc,#cff); background-image:url("../images/cnt5/cloud.png"); 
+    width: 100%;height: 2000px;position:relative;z-index: 1000;color: #FFF;background: linear-gradient(#fcc,#cff);/* background-image:url("../images/cnt5/cloud.png");   */
     .bigstudio{top: 20% ;right: 5%;width: 1183px;height: 900px;background: url("../images/cnt5/스튜디오\(빅\).png");
     li{position: absolute;
     &.choice{opacity: 1;}
@@ -328,4 +329,72 @@ span {display: inline-block;@include animation(spin-letters 10s linear);}}
 }
 
 /* cnt6 */
-#cnt6{width: 100%;height: 8163px;background: url("../images/common/큰화면-작업.png");}
+#cnt6{
+    width: 1920px;height: 5902px;background: url("../images/cnt6/cnt6.png");overflow: hidden;
+    ul{width: 100%;height: 100%;}
+    .cloud{width: 100%;height: 100%;
+    img{position: absolute;}
+    img:nth-of-type(odd){@include animation(cup 3s linear infinite);}
+    img:nth-of-type(even){@include animation(cdown 3s linear infinite);}
+    }
+    .cloud_1{height: 25%;width: 100%;
+        img:nth-of-type(1){top: 15%;left: 30%;}
+        img:nth-of-type(2){top: 40%;left: 40%;}
+        img:nth-of-type(3){top: 60%;left: 50%;}
+        img:nth-of-type(4){top: 80%;left: 70%;}
+    }
+    .cloud_2{height: 50%;width: 100%;
+        img:nth-of-type(1){top: 15%;left: 70%;}
+        img:nth-of-type(2){top: 30%;left: 20%;}
+        img:nth-of-type(3){top: 60%;left: 50%;}
+        img:nth-of-type(4){top: 90%;left: 50%;}
+    }
+    .cloud_3{height: 25%;width: 100%;
+        img:nth-of-type(1){top: 15%;left: 10%;}
+        img:nth-of-type(2){top: 30%;left: 50%;}
+        img:nth-of-type(3){top: 40%;left: 30%;}
+        img:nth-of-type(4){top: 70%;left: 30%;}
+    }
+    .plane{position: absolute;top: 0;left: 0;width: 100%;height: 30%;@include animation(plane 5s linear infinite);}
+    .linkcloud{position: absolute;top: 0;left: 0;width: 100%;height: 100%;
+        li{position: absolute;width: 20%;height: 20%;@include animation(linkcloud 4s linear infinite);}
+        li a:hover{@include animation(f 4s linear infinite);}
+        li:nth-of-type(1){top: 15%;left: 30%;}
+        li:nth-of-type(2){top: 30%;left: 70%;}
+        li:nth-of-type(3){top: 60%;left: 30%;}
+        li:nth-of-type(4){top: 80%;left: 70%;}
+    } 
+}
+
+@include keyframes(cup){
+    0%{transform:translateX(0em) translateY(0em);}
+    15%{transform:translateX(1em) translateY(1em);}
+    30%{transform:translateX(1em) translateY(2em);}
+    45%{transform:translateX(1em) translateY(3em);}
+    60%{transform:translateX(1em) translateY(2em);}
+    75%{transform:translateX(1em) translateY(1em);}
+    100%{transform:translateX(0em) translateY(0em);}
+}
+@include keyframes(cdown){
+    0%{transform:translateX(0em) translateY(1em);}
+    15%{transform:translateX(1em) translateY(1em);}
+    30%{transform:translateX(2em) translateY(1em);}
+    45%{transform:translateX(3em) translateY(1em);}
+    60%{transform:translateX(2em) translateY(1em);}
+    75%{transform:translateX(1em) translateY(1em);}
+    100%{transform:translateX(0em) translateY(1em);}
+}
+@include keyframes(plane){
+    0%{transform:translateX(0em) translateY(0em) rotate(0deg);}
+    25%{transform:translateX(25em) translateY(25em) rotate(20deg);}
+    50%{transform:translateX(50em) translateY(50em) rotate(10deg);}
+    75%{transform:translateX(75em) translateY(75em) rotate(0deg);}
+    100%{transform:translateX(115em) translateY(115em) rotate(0deg);}
+}
+@include keyframes(linkcloud){
+    0%{transform:rotate(0deg);}
+    35%{transform:rotate(5deg);}
+    35%{transform:rotate(0deg);}
+    70%{transform:rotate(-5deg);}
+    0%{transform:rotate(0deg);}
+}
