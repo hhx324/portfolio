@@ -106,12 +106,12 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 25%;
+    width: 10%;
     height: 100%; }
     #header .btn_menu .line {
       position: absolute;
       left: 10%;
-      width: 15%;
+      width: 40%;
       height: 0.7rem;
       background: #000; }
     #header .btn_menu .top {
@@ -837,9 +837,8 @@ body {
       top: 80%;
       margin-top: -300px;
       margin-left: 0;
-      width: auto;
-      height: 600px;
-      background: url("../images/cnt4/cloud.png"); }
+      width: 9800px;
+      height: 600px; }
       #cnt4-2 .cntwrap > ul > li {
         float: left;
         width: 700px;
@@ -1107,10 +1106,11 @@ body {
     opacity: .1; } }
 /* cnt6 */
 #cnt6 {
-  width: 1920px;
+  width: 100%;
   height: 5902px;
   background: url("../images/cnt6/cnt6.png");
-  overflow: hidden; }
+  overflow: hidden;
+  /* ios의 voiceover에서 접근할수 있도록 display 대신 visibility */ }
   #cnt6 ul {
     width: 100%;
     height: 100%; }
@@ -1119,16 +1119,6 @@ body {
     height: 100%; }
     #cnt6 .cloud img {
       position: absolute; }
-    #cnt6 .cloud img:nth-of-type(odd) {
-      -webkit-animation: cup 3s linear infinite;
-      -moz-animation: cup 3s linear infinite;
-      -o-animation: cup 3s linear infinite;
-      animation: cup 3s linear infinite; }
-    #cnt6 .cloud img:nth-of-type(even) {
-      -webkit-animation: cdown 3s linear infinite;
-      -moz-animation: cdown 3s linear infinite;
-      -o-animation: cdown 3s linear infinite;
-      animation: cdown 3s linear infinite; }
   #cnt6 .cloud_1 {
     height: 25%;
     width: 100%; }
@@ -1144,6 +1134,16 @@ body {
     #cnt6 .cloud_1 img:nth-of-type(4) {
       top: 80%;
       left: 70%; }
+    #cnt6 .cloud_1 img:nth-of-type(odd) {
+      -webkit-animation: cup 3s linear infinite;
+      -moz-animation: cup 3s linear infinite;
+      -o-animation: cup 3s linear infinite;
+      animation: cup 3s linear infinite; }
+    #cnt6 .cloud_1 img:nth-of-type(even) {
+      -webkit-animation: cdown 3s linear infinite;
+      -moz-animation: cdown 3s linear infinite;
+      -o-animation: cdown 3s linear infinite;
+      animation: cdown 3s linear infinite; }
   #cnt6 .cloud_2 {
     height: 50%;
     width: 100%; }
@@ -1159,6 +1159,16 @@ body {
     #cnt6 .cloud_2 img:nth-of-type(4) {
       top: 90%;
       left: 50%; }
+    #cnt6 .cloud_2 img:nth-of-type(odd) {
+      -webkit-animation: cup 3s linear infinite;
+      -moz-animation: cup 3s linear infinite;
+      -o-animation: cup 3s linear infinite;
+      animation: cup 3s linear infinite; }
+    #cnt6 .cloud_2 img:nth-of-type(even) {
+      -webkit-animation: cdown 3s linear infinite;
+      -moz-animation: cdown 3s linear infinite;
+      -o-animation: cdown 3s linear infinite;
+      animation: cdown 3s linear infinite; }
   #cnt6 .cloud_3 {
     height: 25%;
     width: 100%; }
@@ -1174,6 +1184,16 @@ body {
     #cnt6 .cloud_3 img:nth-of-type(4) {
       top: 70%;
       left: 30%; }
+    #cnt6 .cloud_3 img:nth-of-type(odd) {
+      -webkit-animation: cup 3s linear infinite;
+      -moz-animation: cup 3s linear infinite;
+      -o-animation: cup 3s linear infinite;
+      animation: cup 3s linear infinite; }
+    #cnt6 .cloud_3 img:nth-of-type(even) {
+      -webkit-animation: cdown 3s linear infinite;
+      -moz-animation: cdown 3s linear infinite;
+      -o-animation: cdown 3s linear infinite;
+      animation: cdown 3s linear infinite; }
   #cnt6 .plane {
     position: absolute;
     top: 0;
@@ -1193,16 +1213,18 @@ body {
     #cnt6 .linkcloud li {
       position: absolute;
       width: 20%;
-      height: 20%;
-      -webkit-animation: linkcloud 4s linear infinite;
-      -moz-animation: linkcloud 4s linear infinite;
-      -o-animation: linkcloud 4s linear infinite;
-      animation: linkcloud 4s linear infinite; }
-    #cnt6 .linkcloud li a:hover {
-      -webkit-animation: f 4s linear infinite;
-      -moz-animation: f 4s linear infinite;
-      -o-animation: f 4s linear infinite;
-      animation: f 4s linear infinite; }
+      height: 5%;
+      -webkit-animation: linkcloud 2s linear infinite;
+      -moz-animation: linkcloud 2s linear infinite;
+      -o-animation: linkcloud 2s linear infinite;
+      animation: linkcloud 2s linear infinite; }
+      #cnt6 .linkcloud li .detail {
+        display: none;
+        font-size: 4rem;
+        color: #666;
+        text-align: center; }
+    #cnt6 .linkcloud li:hover .detail {
+      display: block; }
     #cnt6 .linkcloud li:nth-of-type(1) {
       top: 15%;
       left: 30%; }
@@ -1215,6 +1237,55 @@ body {
     #cnt6 .linkcloud li:nth-of-type(4) {
       top: 80%;
       left: 70%; }
+  #cnt6 .open_btn {
+    padding: 10px;
+    background: red; }
+  #cnt6 #dim, #cnt6 .modal_cnt {
+    position: fixed;
+    z-index: 1000;
+    width: 90vw;
+    height: 1000px; }
+  #cnt6 #dim {
+    display: none;
+    width: 100%;
+    height: 50vw;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); }
+  #cnt6 .modal_cnt {
+    visibility: hidden;
+    background: #fff; }
+  #cnt6 #modal1 {
+    width: 80%;
+    height: 40vw;
+    color: #000;
+    font-size: 4rem;
+    overflow: auto; }
+    #cnt6 #modal1 #tit1 {
+      text-align: center; }
+    #cnt6 #modal1 img {
+      width: 100%;
+      top: 20%;
+      left: 0;
+      display: none; }
+    #cnt6 #modal1 img:nth-of-type(1) {
+      display: block; }
+    #cnt6 #modal1 .etc {
+      text-align: center; }
+      #cnt6 #modal1 .etc a {
+        cursor: pointer;
+        padding: 0.5rem;
+        font-size: 2rem;
+        font-weight: 600; }
+  #cnt6 #modal2 {
+    width: 400px; }
+  #cnt6 .modal_cnt .close_btn {
+    position: fixed;
+    top: 10%;
+    right: 5%;
+    width: 50px;
+    height: 50px;
+    background: blue; }
 
 @-webkit-keyframes cup {
   0% {
@@ -1345,7 +1416,7 @@ body {
   35% {
     transform: rotate(5deg); }
   35% {
-    transform: rotate(0deg); }
+    transform: rotate(0deg) translateY(5em); }
   70% {
     transform: rotate(-5deg); }
   0% {
@@ -1356,7 +1427,7 @@ body {
   35% {
     transform: rotate(5deg); }
   35% {
-    transform: rotate(0deg); }
+    transform: rotate(0deg) translateY(5em); }
   70% {
     transform: rotate(-5deg); }
   0% {
@@ -1367,10 +1438,78 @@ body {
   35% {
     transform: rotate(5deg); }
   35% {
-    transform: rotate(0deg); }
+    transform: rotate(0deg) translateY(5em); }
   70% {
     transform: rotate(-5deg); }
   0% {
     transform: rotate(0deg); } }
+/* cnt7 */
+#cnt7 {
+  background: linear-gradient(to bottom, #ffe6b9, #ffffff);
+  width: 100%;
+  height: 1500px; }
+  #cnt7 h3 {
+    position: absolute;
+    bottom: 20rem;
+    left: 20%;
+    font-size: 5rem;
+    color: #756a54; }
+  #cnt7 .wave {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+    #cnt7 .wave img:nth-of-type(1) {
+      position: absolute;
+      bottom: -20rem;
+      -webkit-animation: wave1 4s linear infinite;
+      -moz-animation: wave1 4s linear infinite;
+      -o-animation: wave1 4s linear infinite;
+      animation: wave1 4s linear infinite;
+      z-index: 1; }
+    #cnt7 .wave img:nth-of-type(2) {
+      position: absolute;
+      bottom: -10rem;
+      z-index: 2;
+      -webkit-animation: wave1 2s linear infinite;
+      -moz-animation: wave1 2s linear infinite;
+      -o-animation: wave1 2s linear infinite;
+      animation: wave1 2s linear infinite; }
+    #cnt7 .wave img:nth-of-type(3) {
+      position: absolute;
+      top: 40%;
+      left: 20%; }
+  #cnt7 .sandal img {
+    top: 0;
+    left: 20%; }
+
+@-webkit-keyframes wave1 {
+  0% {
+    transform: translateY(0em); }
+  35% {
+    transform: translateY(5em); }
+  70% {
+    transform: translateY(-5em); }
+  0% {
+    transform: translateY(0em); } }
+@-moz-keyframes wave1 {
+  0% {
+    transform: translateY(0em); }
+  35% {
+    transform: translateY(5em); }
+  70% {
+    transform: translateY(-5em); }
+  0% {
+    transform: translateY(0em); } }
+@keyframes wave1 {
+  0% {
+    transform: translateY(0em); }
+  35% {
+    transform: translateY(5em); }
+  70% {
+    transform: translateY(-5em); }
+  0% {
+    transform: translateY(0em); } }
 
 /*# sourceMappingURL=index.css.map */

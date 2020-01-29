@@ -51,8 +51,8 @@ body{width: 100%;margin: 0 auto;font-family: smile;font-weight: 400;font-size: 1
 /* header */
 #header{position: fixed;top: 0;right: 0;left: 0;width: 100%;height: 5rem;z-index: 2000;
 .btn_menu{
-    position: absolute;top: 0;left: 0;width: 25%;height: 100%;
-    .line{position: absolute;left: 10%;width: 15%;height: 0.7rem;background: #000;}
+    position: absolute;top: 0;left: 0;width: 10%;height: 100%;
+    .line{position: absolute;left: 10%;width: 40%;height: 0.7rem;background: #000;}
     .top{top: 10%;}
     .mid{top: 40%;}
     .btm{top: 70%}
@@ -217,7 +217,7 @@ span {display: inline-block;@include animation(spin-letters 10s linear);}}
     width: 100%;overflow-x: hidden;
     .cntwrap{position:relative;top: 0;left: 0;height: 100vh;
         &.fix{position: fixed;}
-        > ul{position:relative;top:80%;margin-top: -300px;margin-left: 0;width: auto;height: 600px;background: url("../images/cnt4/cloud.png");
+        > ul{position:relative;top:80%;margin-top: -300px;margin-left: 0;width: 9800px;height: 600px;
             > li{float:left;width: 700px;height: 600px;line-height: 600px;
                 h3{font-size: 7rem;}
                 p{font-size: 4rem;}
@@ -330,40 +330,61 @@ span {display: inline-block;@include animation(spin-letters 10s linear);}}
 
 /* cnt6 */
 #cnt6{
-    width: 1920px;height: 5902px;background: url("../images/cnt6/cnt6.png");overflow: hidden;
+    width: 100%;height: 5902px;background: url("../images/cnt6/cnt6.png");overflow: hidden;
     ul{width: 100%;height: 100%;}
     .cloud{width: 100%;height: 100%;
     img{position: absolute;}
-    img:nth-of-type(odd){@include animation(cup 3s linear infinite);}
-    img:nth-of-type(even){@include animation(cdown 3s linear infinite);}
     }
     .cloud_1{height: 25%;width: 100%;
         img:nth-of-type(1){top: 15%;left: 30%;}
         img:nth-of-type(2){top: 40%;left: 40%;}
         img:nth-of-type(3){top: 60%;left: 50%;}
         img:nth-of-type(4){top: 80%;left: 70%;}
+        img:nth-of-type(odd){@include animation(cup 3s linear infinite);}
+    img:nth-of-type(even){@include animation(cdown 3s linear infinite);}
     }
     .cloud_2{height: 50%;width: 100%;
         img:nth-of-type(1){top: 15%;left: 70%;}
         img:nth-of-type(2){top: 30%;left: 20%;}
         img:nth-of-type(3){top: 60%;left: 50%;}
         img:nth-of-type(4){top: 90%;left: 50%;}
+        img:nth-of-type(odd){@include animation(cup 3s linear infinite);}
+    img:nth-of-type(even){@include animation(cdown 3s linear infinite);}
     }
     .cloud_3{height: 25%;width: 100%;
         img:nth-of-type(1){top: 15%;left: 10%;}
         img:nth-of-type(2){top: 30%;left: 50%;}
         img:nth-of-type(3){top: 40%;left: 30%;}
         img:nth-of-type(4){top: 70%;left: 30%;}
+        img:nth-of-type(odd){@include animation(cup 3s linear infinite);}
+    img:nth-of-type(even){@include animation(cdown 3s linear infinite);}
     }
     .plane{position: absolute;top: 0;left: 0;width: 100%;height: 30%;@include animation(plane 5s linear infinite);}
     .linkcloud{position: absolute;top: 0;left: 0;width: 100%;height: 100%;
-        li{position: absolute;width: 20%;height: 20%;@include animation(linkcloud 4s linear infinite);}
-        li a:hover{@include animation(f 4s linear infinite);}
+        li{position: absolute;width: 20%;height: 5%;@include animation(linkcloud 2s linear infinite);
+        .detail{display: none;font-size: 4rem;color: #666;text-align: center;}
+        }
+        li:hover .detail{display: block;}
         li:nth-of-type(1){top: 15%;left: 30%;}
         li:nth-of-type(2){top: 30%;left: 70%;}
         li:nth-of-type(3){top: 60%;left: 30%;}
         li:nth-of-type(4){top: 80%;left: 70%;}
     } 
+    .open_btn{padding: 10px;background: red;}
+    #dim, .modal_cnt{position: fixed;z-index: 1000;width: 90vw;height:1000px;}
+    #dim{display: none;width: 100%;height:50vw;top: 0;left: 0;background: rgba(0,0,0, .5);}
+    .modal_cnt{visibility: hidden;background: #fff;}/* ios의 voiceover에서 접근할수 있도록 display 대신 visibility */
+    #modal1{width: 80%;height: 40vw;color: #000;font-size: 4rem;overflow:auto;
+        #tit1{text-align: center;}
+    img{width: 100%;top: 20%;left: 0;display: none;}
+    img:nth-of-type(1){display: block;}
+        .etc{text-align: center;
+            a{cursor: pointer;padding: 0.5rem;font-size: 2rem;font-weight: 600;}
+        } 
+        
+    }
+    #modal2{width: 400px;}
+    .modal_cnt .close_btn{position: fixed;top: 10%;right: 5%;width: 50px;height: 50px;background: blue;}
 }
 
 @include keyframes(cup){
@@ -394,7 +415,26 @@ span {display: inline-block;@include animation(spin-letters 10s linear);}}
 @include keyframes(linkcloud){
     0%{transform:rotate(0deg);}
     35%{transform:rotate(5deg);}
-    35%{transform:rotate(0deg);}
+    35%{transform:rotate(0deg) translateY(5em);}
     70%{transform:rotate(-5deg);}
     0%{transform:rotate(0deg);}
+}
+
+/* cnt7 */
+#cnt7{background: linear-gradient(to bottom,#ffe6b9,#ffffff);width: 100%;height: 1500px;
+    h3{position: absolute;bottom: 20rem;left: 20%;font-size: 5rem;color: #756a54;}
+    .wave{bottom: 0;left: 0;width: 100%;height: 100%;overflow: hidden;
+        img:nth-of-type(1){position: absolute;bottom: -20rem;@include animation(wave1 4s linear infinite);z-index: 1;}
+        img:nth-of-type(2){position: absolute;bottom: -10rem;z-index: 2;@include animation(wave1 2s linear infinite);}
+        img:nth-of-type(3){position: absolute;top: 40%;left: 20%;}
+    }
+    .sandal{
+        img{top: 0;left: 20%;}
+    }
+}
+@include keyframes(wave1) {
+    0%{transform:translateY(0em)}
+    35%{transform:translateY(5em)}
+    70%{transform:translateY(-5em)}
+    0%{transform:translateY(0em)}
 }
