@@ -13,7 +13,9 @@ src:local("※"),
 font-face{
     font-family:smile;
     font-weight: 400;
+    src: url("../font/BinggraeMelonaA1.eot");
     src: local("※"),
+        url("../font/BinggraeMelonaA1.woff2") format("woff2"),
         url("../font/BinggraeMelona.woff") format("woff"),
         url("../font/BinggraeMelona.otf") format("opentype");
 }
@@ -21,8 +23,9 @@ font-face{
 font-face{
     font-family:smile;
     font-weight:600;
-    src: url("../font/BinggraeMelonBold.otf.eot");
+    src: url("../font/BinggraeMelona-BoldA1.eot");
     src: local("※"),
+        url("../font/BinggraeMelona-BoldA1.woff2") format("woff2"),
         url("../font/BinggraeMelona-Bold.woff") format("woff"),
         url("../font/BinggraeMelona.otf") format("opentype");
 }
@@ -64,10 +67,10 @@ body{width: 100%;margin: 0 auto;font-family: smile;font-weight: 400;font-size: 1
 /* cnt1 */
 #content{width: 100%;height: 100%;color: #fff;}
 #cnt1{position: relative;height: 1080px;width: 100%;background-image: url("../images/cnt1/bg.png");box-sizing: border-box;overflow: hidden;}
-.portfolio {top: 25%;left: 15%;@include animation(star 10s ease-out);}
-.foryou {top: 55%;left: 15%;@include animation(wars 10s ease-out);}
-.byline {font-family: star;top: 44%;left: 25%;@include animation(move-byline 10s linear);font-size: 5rem;
-span {display: inline-block;@include animation(spin-letters 10s linear);}}
+.portfolio {top: 25%;left: 15%;@include animation(star 4s ease-out);}
+.foryou {top: 55%;left: 15%;@include animation(wars 4s ease-out);}
+.byline {font-family: star;top: 44%;left: 25%;@include animation(move-byline 4s linear);font-size: 5rem;
+span {display: inline-block;@include animation(spin-letters 4s linear);}}
 
 @include keyframes(star) {0% {opacity: 0;transform: scale(1.5) translateY(-0.75em);}
     20% {opacity: 1;}
@@ -125,6 +128,7 @@ span {display: inline-block;@include animation(spin-letters 10s linear);}}
     70%{transform: translateX(1em);}
     100%{opacity: 1;transform: translateX(0em);}
 }
+.moonshadow3{bottom: -1%;right: 0;opacity: .6 ;@include animation(moonshadow2 6s linear infinite);}
 .star1{top: 15%;right: 0;z-index: -1;@include animation(star1 2s linear infinite);}
 .star2{top: 0;right: 0;z-index: -1;@include animation(star2 3s linear infinite);}
 @include keyframes(star1){
@@ -223,55 +227,61 @@ span {display: inline-block;@include animation(spin-letters 10s linear);}}
                 p{font-size: 4rem;}
             }
             li:nth-of-type(3),li:nth-of-type(4), li:nth-of-type(5){h3{font-size: 15rem;}}
-            li:nth-of-type(5){background: url("../images/cnt4/악보.png") no-repeat center 65%;}
-            li:nth-of-type(6){background: url("../images/cnt4/악보1.png") no-repeat center 65%;position: relative;
+            li:nth-of-type(5){background: url("../images/cnt4/lyric.png") no-repeat center 65%;}
+            li:nth-of-type(6){background: url("../images/cnt4/lyric1.png") no-repeat center 65%;position: relative;
             div{position: absolute;top: -7rem;left: 5rem;
                 p{position: absolute;top: 5rem; left: 10rem;}
             }
             }
             li:nth-of-type(7){
-                background: url("../images/cnt4/악보2.png") no-repeat center 65%;position: relative;
+                background: url("../images/cnt4/lyric2.png") no-repeat center 65%;position: relative;
                 div{position: absolute;top: 5rem;left: 50%;
                     p{position: absolute;top: -5rem; left: 5rem;}
                 }
             }
             li:nth-of-type(8){
-            background: url("../images/cnt4/악보1.png") no-repeat center 65%;position: relative;
+            background: url("../images/cnt4/lyric1.png") no-repeat center 65%;position: relative;
                 div{position: absolute;top: -2rem;left: 20%;
                     p{position: absolute;top: 8rem; left: 10rem;}
                 }
             }
             li:nth-of-type(9){
-                background: url("../images/cnt4/악보2.png") no-repeat center 65%;
+                background: url("../images/cnt4/lyric2.png") no-repeat center 65%;
                 position: relative;
                 div{position: absolute;top: -1rem;left: 70%;
                     p{position: absolute;top: 6rem; left: 12rem;}
                 }
             }
-            li:nth-of-type(10){background: url("../images/cnt4/악보1.png") no-repeat center 65%;position: relative;
+            li:nth-of-type(10){background: url("../images/cnt4/lyric1.png") no-repeat center 65%;position: relative;
                 div{position: absolute;top: 5rem;left: 60%;
                     p{position: absolute;top: -4rem; left: 8rem;}
                 }
             }
-            li:nth-of-type(11){background: url("../images/cnt4/악보2.png") no-repeat center 65%;position: relative;
+            li:nth-of-type(11){background: url("../images/cnt4/lyric2.png") no-repeat center 65%;position: relative;
                 div{position: absolute;top: 0;left: 20%;
                     p{position: absolute;top: 6rem; left: 8rem;}
                 }
             
             }
-            li:nth-of-type(12){background: url("../images/cnt4/악보1.png") no-repeat center 65%;position: relative;
+            li:nth-of-type(12){background: url("../images/cnt4/lyric1.png") no-repeat center 65%;position: relative;
                 div{position: absolute;top: -7rem;left: 0;
                     p{position: absolute;top: 6rem; left: 20rem;}
                 }
             
             }
-            li:nth-of-type(13){background: url("../images/cnt4/악보2.png") no-repeat center 65%;position: relative;
+            li:nth-of-type(13){background: url("../images/cnt4/lyric2.png") no-repeat center 65%;position: relative;
                 div{position: absolute;top: -3rem;left: 0;
                     p{position: absolute;top: 8rem; left: 15rem;}
                 }
             
             }
-            li:nth-of-type(14){background: url("../images/cnt4/악보4.png") no-repeat center 65%;}
+            li:nth-of-type(14){background: url("../images/cnt4/lyric2.png") no-repeat center 65%;position: relative;
+                div{position: absolute;bottom: 0;left: 0;
+                    p{position: absolute;top: 8rem; left: 15rem;}
+                }
+            
+            }
+            li:nth-of-type(15){background: url("../images/cnt4/lyric3.png") no-repeat center 65%;}
         }/* 가로크기는 스크립트에서도 가능함 */
     }/* 기본 relative */
     /* 가로 스크롤로 보여질 영역에서는 fixed로 고정시키기 */
@@ -290,6 +300,7 @@ span {display: inline-block;@include animation(spin-letters 10s linear);}}
         li:nth-of-type(3){top: 40%;left: 25%;background: linear-gradient(to bottom right,#fcc,#ff99cc);border: 10px solid #fff;border-radius: 25px;}
         li:nth-of-type(4){top: 45%;left: 43%;background: linear-gradient(to bottom right,#fcc,#ff99cc);border: 10px solid #fff;border-radius: 25px;}
         li:nth-of-type(5){top: 40%;left: 65%;background: linear-gradient(to bottom right,#fcc,#ff99cc);border: 10px solid #fff;border-radius: 25px;}
+        li:nth-of-type(6){bottom: 5%;left: 5%;font-size: 1.5rem;}
     }
     .bs-small{
         li{display: none;}
@@ -362,29 +373,46 @@ span {display: inline-block;@include animation(spin-letters 10s linear);}}
     .plane{position: absolute;top: 0;left: 0;width: 100%;height: 30%;@include animation(plane 5s linear infinite);}
     .linkcloud{position: absolute;top: 0;left: 0;width: 100%;height: 100%;
         li{position: absolute;width: 20%;height: 5%;@include animation(linkcloud 2s linear infinite);
-        .detail{display: none;font-size: 4rem;color: #666;text-align: center;}
+        .detail{font-size: 0rem;transition: all 2s;}
         }
-        li:hover .detail{display: block;}
+        li:hover .detail{font-size: 4rem;color: #666;text-align: center;}
         li:nth-of-type(1){top: 15%;left: 30%;}
         li:nth-of-type(2){top: 30%;left: 70%;}
         li:nth-of-type(3){top: 60%;left: 30%;}
         li:nth-of-type(4){top: 80%;left: 70%;}
     } 
-    .open_btn{padding: 10px;background: red;}
     #dim, .modal_cnt{position: fixed;z-index: 1000;width: 90vw;height:1000px;}
     #dim{display: none;width: 100%;height:50vw;top: 0;left: 0;background: rgba(0,0,0, .5);}
     .modal_cnt{visibility: hidden;background: #fff;}/* ios의 voiceover에서 접근할수 있도록 display 대신 visibility */
-    #modal1{width: 80%;height: 40vw;color: #000;font-size: 4rem;overflow:auto;
+    #modal1{width: 80%;height: 40vw;color: #666;font-size: 4rem;overflow:auto;
         #tit1{text-align: center;}
     img{width: 100%;top: 20%;left: 0;display: none;}
     img:nth-of-type(1){display: block;}
         .etc{text-align: center;
-            a{cursor: pointer;padding: 0.5rem;font-size: 2rem;font-weight: 600;}
+            h3{float: left;}
+            a{cursor: pointer;padding-left: 2rem;font-size: 2rem;font-weight: 600;line-height: 4rem;
+            &:hover{text-decoration: underline;}
+            }
         } 
         
     }
-    #modal2{width: 400px;}
-    .modal_cnt .close_btn{position: fixed;top: 10%;right: 5%;width: 50px;height: 50px;background: blue;}
+    #modal2{width: 80%;height: 40vw;color: #666;font-size: 4rem;overflow:auto;
+        #tit1{text-align: center;}
+    img{width: 100%;top: 20%;left: 0;display: none;}
+    video{width: 100%;top: 20%;left: 0;}
+        .etc{text-align: center;
+            h3{float: left;}
+            a{cursor: pointer;padding-left: 2rem;font-size: 2rem;font-weight: 600;line-height: 4rem;
+            &:hover{text-decoration: underline;}
+            }
+        } 
+        
+    }
+    .modal_cnt .close_btn{position: fixed;top: 10%;right: 5%;width: 4em;height: 4em;color: #fff;
+        .line{position: absolute;left: 0;width: 100%;height: 4px;background: #666;}
+        .top{top: 0;@include transform(rotate(45deg));}
+        .btm{top: 0;;@include transform(rotate(-45deg));}
+    }
 }
 
 @include keyframes(cup){

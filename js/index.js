@@ -172,6 +172,18 @@ $('#modal1 a').on('click', function (e) {
   console.log(tgNum);
   $('#modal1 img').eq(tgNum).css('display', 'block').siblings('img').css('display', 'none');
 });
+$('#modal2 a').eq(0).on('click', function (e) {
+  e.preventDefault(); //a 기본 기능 제한
+  $('#modal2 video').eq(0).css('display', 'block').siblings('img').css('display', 'none');
+});
+$('#modal2 a').eq(1).on('click', function (e) {
+  e.preventDefault(); //a 기본 기능 제한
+  $('#modal2 img').eq(0).css('display', 'block').siblings('img, video').css('display', 'none');
+});
+$('#modal2 a').eq(2).on('click', function (e) {
+  e.preventDefault(); //a 기본 기능 제한
+  $('#modal2 img').eq(1).css('display', 'block').siblings('img, video').css('display', 'none');
+});
 
 });
 

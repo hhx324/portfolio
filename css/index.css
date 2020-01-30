@@ -9,13 +9,14 @@ font-face {
 font-face {
   font-family: smile;
   font-weight: 400;
-  src: local("※"), url("../font/BinggraeMelona.woff") format("woff"), url("../font/BinggraeMelona.otf") format("opentype"); }
+  src: url("../font/BinggraeMelonaA1.eot");
+  src: local("※"), url("../font/BinggraeMelonaA1.woff2") format("woff2"), url("../font/BinggraeMelona.woff") format("woff"), url("../font/BinggraeMelona.otf") format("opentype"); }
 
 font-face {
   font-family: smile;
   font-weight: 600;
-  src: url("../font/BinggraeMelonBold.otf.eot");
-  src: local("※"), url("../font/BinggraeMelona-Bold.woff") format("woff"), url("../font/BinggraeMelona.otf") format("opentype"); }
+  src: url("../font/BinggraeMelona-BoldA1.eot");
+  src: local("※"), url("../font/BinggraeMelona-BoldA1.woff2") format("woff2"), url("../font/BinggraeMelona-Bold.woff") format("woff"), url("../font/BinggraeMelona.otf") format("opentype"); }
 
 /* tagreset */
 * {
@@ -140,34 +141,34 @@ body {
 .portfolio {
   top: 25%;
   left: 15%;
-  -webkit-animation: star 10s ease-out;
-  -moz-animation: star 10s ease-out;
-  -o-animation: star 10s ease-out;
-  animation: star 10s ease-out; }
+  -webkit-animation: star 4s ease-out;
+  -moz-animation: star 4s ease-out;
+  -o-animation: star 4s ease-out;
+  animation: star 4s ease-out; }
 
 .foryou {
   top: 55%;
   left: 15%;
-  -webkit-animation: wars 10s ease-out;
-  -moz-animation: wars 10s ease-out;
-  -o-animation: wars 10s ease-out;
-  animation: wars 10s ease-out; }
+  -webkit-animation: wars 4s ease-out;
+  -moz-animation: wars 4s ease-out;
+  -o-animation: wars 4s ease-out;
+  animation: wars 4s ease-out; }
 
 .byline {
   font-family: star;
   top: 44%;
   left: 25%;
-  -webkit-animation: move-byline 10s linear;
-  -moz-animation: move-byline 10s linear;
-  -o-animation: move-byline 10s linear;
-  animation: move-byline 10s linear;
+  -webkit-animation: move-byline 4s linear;
+  -moz-animation: move-byline 4s linear;
+  -o-animation: move-byline 4s linear;
+  animation: move-byline 4s linear;
   font-size: 5rem; }
   .byline span {
     display: inline-block;
-    -webkit-animation: spin-letters 10s linear;
-    -moz-animation: spin-letters 10s linear;
-    -o-animation: spin-letters 10s linear;
-    animation: spin-letters 10s linear; }
+    -webkit-animation: spin-letters 4s linear;
+    -moz-animation: spin-letters 4s linear;
+    -o-animation: spin-letters 4s linear;
+    animation: spin-letters 4s linear; }
 
 @-webkit-keyframes star {
   0% {
@@ -491,6 +492,15 @@ body {
   100% {
     opacity: 1;
     transform: translateX(0em); } }
+.moonshadow3 {
+  bottom: -1%;
+  right: 0;
+  opacity: 0.6;
+  -webkit-animation: moonshadow2 6s linear infinite;
+  -moz-animation: moonshadow2 6s linear infinite;
+  -o-animation: moonshadow2 6s linear infinite;
+  animation: moonshadow2 6s linear infinite; }
+
 .star1 {
   top: 15%;
   right: 0;
@@ -851,9 +861,9 @@ body {
       #cnt4-2 .cntwrap > ul li:nth-of-type(3) h3, #cnt4-2 .cntwrap > ul li:nth-of-type(4) h3, #cnt4-2 .cntwrap > ul li:nth-of-type(5) h3 {
         font-size: 15rem; }
       #cnt4-2 .cntwrap > ul li:nth-of-type(5) {
-        background: url("../images/cnt4/악보.png") no-repeat center 65%; }
+        background: url("../images/cnt4/lyric.png") no-repeat center 65%; }
       #cnt4-2 .cntwrap > ul li:nth-of-type(6) {
-        background: url("../images/cnt4/악보1.png") no-repeat center 65%;
+        background: url("../images/cnt4/lyric1.png") no-repeat center 65%;
         position: relative; }
         #cnt4-2 .cntwrap > ul li:nth-of-type(6) div {
           position: absolute;
@@ -864,7 +874,7 @@ body {
             top: 5rem;
             left: 10rem; }
       #cnt4-2 .cntwrap > ul li:nth-of-type(7) {
-        background: url("../images/cnt4/악보2.png") no-repeat center 65%;
+        background: url("../images/cnt4/lyric2.png") no-repeat center 65%;
         position: relative; }
         #cnt4-2 .cntwrap > ul li:nth-of-type(7) div {
           position: absolute;
@@ -875,7 +885,7 @@ body {
             top: -5rem;
             left: 5rem; }
       #cnt4-2 .cntwrap > ul li:nth-of-type(8) {
-        background: url("../images/cnt4/악보1.png") no-repeat center 65%;
+        background: url("../images/cnt4/lyric1.png") no-repeat center 65%;
         position: relative; }
         #cnt4-2 .cntwrap > ul li:nth-of-type(8) div {
           position: absolute;
@@ -886,7 +896,7 @@ body {
             top: 8rem;
             left: 10rem; }
       #cnt4-2 .cntwrap > ul li:nth-of-type(9) {
-        background: url("../images/cnt4/악보2.png") no-repeat center 65%;
+        background: url("../images/cnt4/lyric2.png") no-repeat center 65%;
         position: relative; }
         #cnt4-2 .cntwrap > ul li:nth-of-type(9) div {
           position: absolute;
@@ -897,7 +907,7 @@ body {
             top: 6rem;
             left: 12rem; }
       #cnt4-2 .cntwrap > ul li:nth-of-type(10) {
-        background: url("../images/cnt4/악보1.png") no-repeat center 65%;
+        background: url("../images/cnt4/lyric1.png") no-repeat center 65%;
         position: relative; }
         #cnt4-2 .cntwrap > ul li:nth-of-type(10) div {
           position: absolute;
@@ -908,7 +918,7 @@ body {
             top: -4rem;
             left: 8rem; }
       #cnt4-2 .cntwrap > ul li:nth-of-type(11) {
-        background: url("../images/cnt4/악보2.png") no-repeat center 65%;
+        background: url("../images/cnt4/lyric2.png") no-repeat center 65%;
         position: relative; }
         #cnt4-2 .cntwrap > ul li:nth-of-type(11) div {
           position: absolute;
@@ -919,7 +929,7 @@ body {
             top: 6rem;
             left: 8rem; }
       #cnt4-2 .cntwrap > ul li:nth-of-type(12) {
-        background: url("../images/cnt4/악보1.png") no-repeat center 65%;
+        background: url("../images/cnt4/lyric1.png") no-repeat center 65%;
         position: relative; }
         #cnt4-2 .cntwrap > ul li:nth-of-type(12) div {
           position: absolute;
@@ -930,7 +940,7 @@ body {
             top: 6rem;
             left: 20rem; }
       #cnt4-2 .cntwrap > ul li:nth-of-type(13) {
-        background: url("../images/cnt4/악보2.png") no-repeat center 65%;
+        background: url("../images/cnt4/lyric2.png") no-repeat center 65%;
         position: relative; }
         #cnt4-2 .cntwrap > ul li:nth-of-type(13) div {
           position: absolute;
@@ -941,7 +951,18 @@ body {
             top: 8rem;
             left: 15rem; }
       #cnt4-2 .cntwrap > ul li:nth-of-type(14) {
-        background: url("../images/cnt4/악보4.png") no-repeat center 65%; }
+        background: url("../images/cnt4/lyric2.png") no-repeat center 65%;
+        position: relative; }
+        #cnt4-2 .cntwrap > ul li:nth-of-type(14) div {
+          position: absolute;
+          bottom: 0;
+          left: 0; }
+          #cnt4-2 .cntwrap > ul li:nth-of-type(14) div p {
+            position: absolute;
+            top: 8rem;
+            left: 15rem; }
+      #cnt4-2 .cntwrap > ul li:nth-of-type(15) {
+        background: url("../images/cnt4/lyric3.png") no-repeat center 65%; }
 
 /* cnt5 */
 #cnt5 {
@@ -989,6 +1010,10 @@ body {
       background: linear-gradient(to bottom right, #fcc, #ff99cc);
       border: 10px solid #fff;
       border-radius: 25px; }
+    #cnt5 .bigstudio .bs-big li:nth-of-type(6) {
+      bottom: 5%;
+      left: 5%;
+      font-size: 1.5rem; }
     #cnt5 .bigstudio .bs-small li {
       display: none; }
     #cnt5 .bigstudio .bs-small .f {
@@ -1219,12 +1244,12 @@ body {
       -o-animation: linkcloud 2s linear infinite;
       animation: linkcloud 2s linear infinite; }
       #cnt6 .linkcloud li .detail {
-        display: none;
-        font-size: 4rem;
-        color: #666;
-        text-align: center; }
+        font-size: 0rem;
+        transition: all 2s; }
     #cnt6 .linkcloud li:hover .detail {
-      display: block; }
+      font-size: 4rem;
+      color: #666;
+      text-align: center; }
     #cnt6 .linkcloud li:nth-of-type(1) {
       top: 15%;
       left: 30%; }
@@ -1237,9 +1262,6 @@ body {
     #cnt6 .linkcloud li:nth-of-type(4) {
       top: 80%;
       left: 70%; }
-  #cnt6 .open_btn {
-    padding: 10px;
-    background: red; }
   #cnt6 #dim, #cnt6 .modal_cnt {
     position: fixed;
     z-index: 1000;
@@ -1258,7 +1280,7 @@ body {
   #cnt6 #modal1 {
     width: 80%;
     height: 40vw;
-    color: #000;
+    color: #666;
     font-size: 4rem;
     overflow: auto; }
     #cnt6 #modal1 #tit1 {
@@ -1272,20 +1294,72 @@ body {
       display: block; }
     #cnt6 #modal1 .etc {
       text-align: center; }
+      #cnt6 #modal1 .etc h3 {
+        float: left; }
       #cnt6 #modal1 .etc a {
         cursor: pointer;
-        padding: 0.5rem;
+        padding-left: 2rem;
         font-size: 2rem;
-        font-weight: 600; }
+        font-weight: 600;
+        line-height: 4rem; }
+        #cnt6 #modal1 .etc a:hover {
+          text-decoration: underline; }
   #cnt6 #modal2 {
-    width: 400px; }
+    width: 80%;
+    height: 40vw;
+    color: #666;
+    font-size: 4rem;
+    overflow: auto; }
+    #cnt6 #modal2 #tit1 {
+      text-align: center; }
+    #cnt6 #modal2 img {
+      width: 100%;
+      top: 20%;
+      left: 0;
+      display: none; }
+    #cnt6 #modal2 video {
+      width: 100%;
+      top: 20%;
+      left: 0; }
+    #cnt6 #modal2 .etc {
+      text-align: center; }
+      #cnt6 #modal2 .etc h3 {
+        float: left; }
+      #cnt6 #modal2 .etc a {
+        cursor: pointer;
+        padding-left: 2rem;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 4rem; }
+        #cnt6 #modal2 .etc a:hover {
+          text-decoration: underline; }
   #cnt6 .modal_cnt .close_btn {
     position: fixed;
     top: 10%;
     right: 5%;
-    width: 50px;
-    height: 50px;
-    background: blue; }
+    width: 4em;
+    height: 4em;
+    color: #fff; }
+    #cnt6 .modal_cnt .close_btn .line {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: #666; }
+    #cnt6 .modal_cnt .close_btn .top {
+      top: 0;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    #cnt6 .modal_cnt .close_btn .btm {
+      top: 0;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
 
 @-webkit-keyframes cup {
   0% {
