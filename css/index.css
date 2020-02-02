@@ -104,25 +104,63 @@ body {
   height: 5rem;
   z-index: 2000; }
   #header .btn_menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 10%;
-    height: 100%; }
+    top: 35%;
+    left: 1vw;
+    width: 8vw;
+    height: 4vw;
+    z-index: 1000; }
+    #header .btn_menu, #header .btn_menu .line {
+      position: absolute; }
     #header .btn_menu .line {
-      position: absolute;
-      left: 10%;
-      width: 40%;
-      height: 0.7rem;
-      background: #000; }
-    #header .btn_menu .top {
-      top: 10%; }
-    #header .btn_menu .mid {
-      top: 40%; }
-    #header .btn_menu .btm {
-      top: 70%; }
+      -webkit-border-radius: 8px;
+      border-radius: 8px;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      -webkit-background-size: cover !important;
+      background-size: cover !important;
+      width: 100%;
+      height: 4px;
+      background: #333;
+      left: 0; }
+      #header .btn_menu .line.top {
+        top: 0; }
+      #header .btn_menu .line.mid {
+        top: 10px; }
+      #header .btn_menu .line.btm {
+        top: 20px; }
+    #header .btn_menu.active .top {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: 10px; }
+    #header .btn_menu.active .mid {
+      opacity: 0; }
+    #header .btn_menu.active .btm {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      top: 10px; }
   #header #gnb {
-    visibility: hidden; }
+    font-size: 10vw;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 100;
+    right: 0;
+    bottom: 0;
+    background: aqua;
+    padding-top: 56px;
+    overflow-y: auto; }
+    #header #gnb ul li a {
+      display: block;
+      height: 35px;
+      line-height: 35px;
+      color: #fff; }
 
 /* cnt1 */
 #content {
@@ -1332,6 +1370,33 @@ body {
         font-weight: 600;
         line-height: 4rem; }
         #cnt6 #modal2 .etc a:hover {
+          text-decoration: underline; }
+  #cnt6 #modal3 {
+    width: 80%;
+    height: 40vw;
+    color: #666;
+    font-size: 4rem;
+    overflow: auto; }
+    #cnt6 #modal3 #tit1 {
+      text-align: center; }
+    #cnt6 #modal3 img {
+      width: 100%;
+      top: 20%;
+      left: 0;
+      display: none; }
+    #cnt6 #modal3 video {
+      text-align: center; }
+    #cnt6 #modal3 .etc {
+      text-align: center; }
+      #cnt6 #modal3 .etc h3 {
+        float: left; }
+      #cnt6 #modal3 .etc a {
+        cursor: pointer;
+        padding-left: 2rem;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 4rem; }
+        #cnt6 #modal3 .etc a:hover {
           text-decoration: underline; }
   #cnt6 .modal_cnt .close_btn {
     position: fixed;

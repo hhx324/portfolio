@@ -23,3 +23,20 @@
         @content;
     }
 }
+@mixin borderBox {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+@mixin radius($value...) {
+    -webkit-border-radius: $value;
+    border-radius: $value;
+}
+@mixin transition($value...) {
+    -webkit-transition: $value;
+    -o-transition: $value;
+    transition: $value;
+}
+@mixin bgcover($value...) {
+    -webkit-background-size: $value !important;
+    background-size: $value !important;
+}
