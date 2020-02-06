@@ -21,6 +21,7 @@ $(document).ready(function () {
 
 /* header */
 
+//메뉴열기 클릭
 $('.btn_menu').on('click', function () {
   if ($(this).hasClass('active')) { //닫기
     $gnb.stop().animate({left: '100%'}, 300, function () {
