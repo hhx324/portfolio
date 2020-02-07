@@ -205,25 +205,30 @@ body {
 #content {
   width: 100%;
   height: 100%;
-  color: #fff; }
+  color: #fff;
+  overflow: hidden; }
 
 #cnt1 {
   position: relative;
   height: 1080px;
   width: 100%;
-  background-image: url("../images/cnt1/bg.png");
-  overflow: hidden; }
+  background-image: url("../images/cnt1/bg.png"); }
   #cnt1 .cnt1_1 {
     position: relative;
     top: 20%;
     left: 0;
-    width: 80%;
+    width: 100%;
     text-align: center;
     height: 50%; }
 
 .portfolio {
   top: 5%;
-  left: 15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   -webkit-animation: star 4s ease-out;
   -moz-animation: star 4s ease-out;
   -o-animation: star 4s ease-out;
@@ -231,7 +236,12 @@ body {
 
 .foryou {
   top: 55%;
-  left: 15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   -webkit-animation: wars 4s ease-out;
   -moz-animation: wars 4s ease-out;
   -o-animation: wars 4s ease-out;
@@ -240,7 +250,12 @@ body {
 .byline {
   font-family: star;
   top: 37%;
-  left: 25%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   -webkit-animation: move-byline 4s linear;
   -moz-animation: move-byline 4s linear;
   -o-animation: move-byline 4s linear;
@@ -376,7 +391,7 @@ body {
 /* cnt2 */
 #cnt2 {
   width: 100%;
-  height: 2045px;
+  height: 2050px;
   background-image: url("../images/cnt2/bg.png");
   overflow: hidden;
   z-index: -1; }
@@ -716,14 +731,15 @@ body {
 /* cnt3 */
 #cnt3 {
   width: 100%;
-  height: 2000px;
+  height: 1500px;
   position: relative;
   display: table;
-  background: #3161c1 url("../images/cnt4/cloud2.png") no-repeat; }
+  background: #3161c1 url("../images/cnt4/cloud2.png") no-repeat center bottom;
+  /* @include bgcover(cover); */
+  background-size: 100% auto; }
   #cnt3 > div {
     position: absolute;
-    top: 20%;
-    left: 35%; }
+    top: 10%; }
   #cnt3 .hello {
     color: white;
     letter-spacing: 2px;
@@ -731,6 +747,12 @@ body {
     font-family: "smile";
     font-weight: 600; }
   #cnt3 #main-ctr {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
     display: table-cell;
     vertical-align: middle;
     text-align: center; }
@@ -762,11 +784,17 @@ body {
   #cnt4 #cnt4-1 {
     position: fixed;
     bottom: 25%;
-    left: 38%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
     -webkit-animation: bloom 10s alternate infinite;
     -moz-animation: bloom 10s alternate infinite;
     -o-animation: bloom 10s alternate infinite;
-    animation: bloom 10s alternate infinite; }
+    animation: bloom 10s alternate infinite;
+    margin-left: -250px; }
     #cnt4 #cnt4-1 li:nth-of-type(1) {
       -webkit-transform: scale(0.8);
       -moz-transform: scale(0.8);
@@ -775,13 +803,15 @@ body {
       transform: scale(0.8); }
     #cnt4 #cnt4-1 li:nth-of-type(2) {
       position: absolute;
-      top: 23.5rem;
+      top: 47%;
       left: 6.5rem;
       -webkit-animation: fire 10s alternate infinite;
       -moz-animation: fire 10s alternate infinite;
       -o-animation: fire 10s alternate infinite;
       animation: fire 10s alternate infinite;
       z-index: -3; }
+  #cnt4 .para {
+    padding-left: 10%; }
 
 @-webkit-keyframes bloom {
   0% {
@@ -894,6 +924,7 @@ body {
     top: 0;
     left: 0;
     height: 100vh;
+    width: auto;
     /* 가로크기는 스크립트에서도 가능함 */ }
     #cnt4-2 .cntwrap.fix {
       position: fixed; }
@@ -902,7 +933,7 @@ body {
       top: 80%;
       margin-top: -300px;
       margin-left: 0;
-      width: auto;
+      width: validate;
       height: 600px; }
       #cnt4-2 .cntwrap > ul > li {
         float: left;
@@ -1115,6 +1146,10 @@ body {
       -moz-animation: f 1s linear;
       -o-animation: f 1s linear;
       animation: f 1s linear; }
+    #cnt5 .bigstudio .bs-small li:nth-of-type(1) {
+      top: 12%;
+      left: 70%;
+      width: 170%; }
     #cnt5 .bigstudio .bs-small li:nth-of-type(2) {
       top: 12%;
       left: -10%; }
@@ -1127,14 +1162,6 @@ body {
     #cnt5 .bigstudio .bs-small li:nth-of-type(5) {
       top: 12%;
       left: 50%; }
-    #cnt5 .bigstudio .bs-small li:nth-of-type(1) {
-      top: 20.3%;
-      left: 80%;
-      -webkit-transform: scale(1.7);
-      -moz-transform: scale(1.7);
-      -o-transform: scale(1.7);
-      -ms-transform: scale(1.7);
-      transform: scale(1.7); }
   #cnt5 .smallstudio {
     top: 20%;
     left: 5%;
@@ -1150,29 +1177,24 @@ body {
         display: block; }
       #cnt5 .smallstudio .ss-title li {
         display: none;
-        top: 20rem; }
+        top: 10rem;
+        text-align: center; }
       #cnt5 .smallstudio .ss-title h3 {
-        position: absolute;
-        bottom: -18rem;
-        left: 0;
         font-size: 3rem;
         line-height: 4rem;
-        width: 100%; }
-      #cnt5 .smallstudio .ss-title p {
-        position: absolute;
         width: 100%;
-        top: 0rem;
-        left: 0;
-        font-size: 2.5rem; }
+        padding: 20px 0; }
+      #cnt5 .smallstudio .ss-title p {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        padding: 5px 0; }
       #cnt5 .smallstudio .ss-title img {
-        position: absolute;
-        top: -15rem;
-        left: 38%;
         -webkit-transform: scale(1.3);
         -moz-transform: scale(1.3);
         -o-transform: scale(1.3);
         -ms-transform: scale(1.3);
-        transform: scale(1.3); }
+        transform: scale(1.3);
+        padding: 10px 0; }
     #cnt5 .smallstudio .ss-button li {
       width: 20%; }
     #cnt5 .smallstudio .ss-button li:nth-of-type(1) {
@@ -1723,11 +1745,9 @@ body {
     font-size: 4rem;
     left: 32%; }
 
-  #cnt4-1 {
-    right: 10%; }
-    #cnt4-1 li:nth-of-type(2) {
-      right: 25em; }
-
+  /*#cnt4-1{right: 10%;
+      li:nth-of-type(2){right: 25em;}
+  } */
   #cnt5 .bigstudio {
     right: 0; }
 
@@ -1747,43 +1767,15 @@ body {
   .byline {
     font-size: 4rem; }
 
-  #cnt4-1 {
-    right: -15em; }
-    #cnt4-1 li:nth-of-type(1) {
-      left: 0; }
-    #cnt4-1 li:nth-of-type(2) {
-      right: 40rem; }
-
+  /*#cnt4 #cnt4-1{right: -15em;
+      li:nth-of-type(1){left: 0;}
+      li:nth-of-type(2){right: 52%;}
+  } */
   #cnt5 .bigstudio {
-    display: none; }
+    width: 70%; }
 
   #cnt5 .smallstudio {
-    width: 50%;
-    left: 25%; }
-    #cnt5 .smallstudio .ss-title li {
-      top: 20rem; }
-    #cnt5 .smallstudio .ss-title p {
-      left: 0; }
-    #cnt5 .smallstudio .ss-title img {
-      left: 43%; }
-    #cnt5 .smallstudio .ss-button li:nth-of-type(1) {
-      bottom: 5%;
-      left: 2%; }
-    #cnt5 .smallstudio .ss-button li:nth-of-type(2) {
-      bottom: 5%;
-      left: 25%; }
-    #cnt5 .smallstudio .ss-button li:nth-of-type(3) {
-      bottom: 5%;
-      left: 45%;
-      text-align: center; }
-    #cnt5 .smallstudio .ss-button li:nth-of-type(4) {
-      bottom: 5%;
-      right: 10%;
-      text-align: right; }
-    #cnt5 .smallstudio .ss-button li:nth-of-type(5) {
-      bottom: 5%;
-      right: 40%;
-      text-align: right; }
+    width: 30%; }
 
   .cloud_1 img:nth-of-type(1) {
     top: 15%;
@@ -1834,7 +1826,8 @@ body {
     right: 0;
     width: 100%; }
 
-  .portfolio {
+  #content #cnt1 .cnt1_1 .portfolio {
+    top: 20%;
     width: 80%;
     left: 25%; }
 
@@ -1844,25 +1837,296 @@ body {
 
   .byline {
     font-size: 3.2rem;
-    left: 40%;
+    top: 43%;
+    left: 35%;
     text-align: right; }
 
-  #cnt3 {
-    background: #3161c1 url("../images/cnt4/cloud2.png") no-repeat 20%; }
-
-  #cnt4-1 li:nth-of-type(2) {
-    right: 50%; }
-
-  .etc h3 {
-    font-size: 1rem; }
-  .etc a {
-    display: block;
-    font-size: 1rem;
+  /*  #cnt4 #cnt4-1{ left: 30%;
+       li:nth-of-type(2){right: 50%;}} */
+  #content #cnt6 .modal_cnt .etc h3 {
+    font-size: 2.5rem; }
+  #content #cnt6 .modal_cnt .etc a {
+    font-size: 1.5rem;
     font-weight: 600;
-    line-height: 2rem;
-    padding-right: 1rem; }
-    .etc a:hover {
+    line-height: 2.5rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem; }
+    #content #cnt6 .modal_cnt .etc a:hover {
       text-decoration: underline; } }
+@media all and (max-width: 1260px) {
+  #content #cnt1 .cnt1_1 .portfolio {
+    top: 20%;
+    width: 80%;
+    left: 20%; }
+
+  #content #cnt1 .cnt1_1 .foryou {
+    width: 80%;
+    left: 20%;
+    top: 40%; }
+
+  .byline {
+    font-size: 2.5rem;
+    top: 60%;
+    left: 37%;
+    text-align: center; }
+
+  #content #cnt2 h2 {
+    font-size: 5rem;
+    line-height: 5rem; }
+
+  #content #cnt2 .moon {
+    width: 50%;
+    opacity: .7; }
+
+  #content #cnt2 .moonshadow1, #content #cnt2 .moonshadow2, #content #cnt2 .moonshadow3 {
+    width: 30%;
+    bottom: 3%; }
+
+  #cnt5 .bigstudio {
+    display: none; }
+
+  #content #cnt5 .smallstudio {
+    width: 80%;
+    left: 10%; }
+    #content #cnt5 .smallstudio .ss-title li {
+      top: 2rem; }
+      #content #cnt5 .smallstudio .ss-title li h3 {
+        font-size: 5rem;
+        padding: 30px 0; }
+      #content #cnt5 .smallstudio .ss-title li p {
+        font-size: 4rem;
+        line-height: 5rem; }
+    #content #cnt5 .smallstudio .ss-button li:nth-of-type(1) {
+      left: 5%;
+      text-align: center; }
+    #content #cnt5 .smallstudio .ss-button li:nth-of-type(2) {
+      left: 25%;
+      text-align: center; }
+    #content #cnt5 .smallstudio .ss-button li:nth-of-type(3) {
+      left: 45%;
+      text-align: center; }
+    #content #cnt5 .smallstudio .ss-button li:nth-of-type(4) {
+      left: 65%;
+      text-align: center; }
+    #content #cnt5 .smallstudio .ss-button li:nth-of-type(5) {
+      right: 5%;
+      text-align: center; }
+
+  /* #content #cnt4 #cnt4-1{bottom: 10%} */
+  #content #cnt6 .modal_cnt .etc h3 {
+    font-size: 2.5rem; }
+  #content #cnt6 .modal_cnt .etc a {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem; }
+    #content #cnt6 .modal_cnt .etc a:hover {
+      text-decoration: underline; }
+
+  #content #cnt6 .linkcloud li:nth-of-type(1) {
+    left: 10%; }
+  #content #cnt6 .linkcloud li:nth-of-type(2) {
+    left: 40%; }
+  #content #cnt6 .linkcloud li:nth-of-type(3) {
+    left: 10%; }
+  #content #cnt6 .linkcloud li:nth-of-type(4) {
+    left: 40%; }
+
+  #content #cnt6 .cloud_1 img:nth-of-type(1) {
+    right: 0; }
+  #content #cnt6 .cloud_1 img:nth-of-type(2) {
+    left: 0; }
+  #content #cnt6 .cloud_1 img:nth-of-type(3) {
+    left: 20%; }
+  #content #cnt6 .cloud_1 img:nth-of-type(4) {
+    left: 30%; }
+
+  #content #cnt6 .cloud_2 {
+    height: 50%;
+    width: 100%; }
+    #content #cnt6 .cloud_2 img:nth-of-type(1) {
+      left: 0; }
+    #content #cnt6 .cloud_2 img:nth-of-type(2) {
+      left: 10%; }
+    #content #cnt6 .cloud_2 img:nth-of-type(3) {
+      left: 40%; }
+    #content #cnt6 .cloud_2 img:nth-of-type(4) {
+      left: 50%; }
+
+  #content #cnt6 .cloud_3 {
+    height: 25%;
+    width: 100%; }
+    #content #cnt6 .cloud_3 img:nth-of-type(1) {
+      left: 50%; }
+    #content #cnt6 .cloud_3 img:nth-of-type(2) {
+      left: 0; }
+    #content #cnt6 .cloud_3 img:nth-of-type(3) {
+      left: 10%; }
+    #content #cnt6 .cloud_3 img:nth-of-type(4) {
+      left: 20%; } }
+@media all and (max-width: 1100px) {
+  #content #cnt2 .moonshadow1, #content #cnt2 .moonshadow2, #content #cnt2 .moonshadow3 {
+    bottom: 4%; }
+
+  #content #cnt7 .wave img:nth-of-type(1) {
+    position: absolute;
+    bottom: -10rem;
+    -webkit-animation: wave1 4s linear infinite;
+    -moz-animation: wave1 4s linear infinite;
+    -o-animation: wave1 4s linear infinite;
+    animation: wave1 4s linear infinite;
+    z-index: 1; }
+  #content #cnt7 .wave img:nth-of-type(2) {
+    position: absolute;
+    bottom: -10rem;
+    z-index: 2;
+    -webkit-animation: wave1 2s linear infinite;
+    -moz-animation: wave1 2s linear infinite;
+    -o-animation: wave1 2s linear infinite;
+    animation: wave1 2s linear infinite; } }
+@media all and (max-width: 1000px) {
+  #content #cnt2 .moonshadow1, #content #cnt2 .moonshadow2, #content #cnt2 .moonshadow3 {
+    bottom: 5%; }
+
+  #content #cnt6 .modal_cnt .etc h3 {
+    font-size: 2.5rem; }
+  #content #cnt6 .modal_cnt .etc a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem; }
+    #content #cnt6 .modal_cnt .etc a:hover {
+      text-decoration: underline; } }
+@media all and (max-width: 980px) {
+  #content > #cnt4 > h3, #content > #cnt5 > h3, #content > #cnt6 > h3 {
+    position: absolute;
+    left: 20%;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    float: none; }
+
+  #content #cnt3 #main-ctr h1 {
+    font-size: 3rem; }
+
+  .para {
+    display: none; }
+
+  #content #cnt2 .moonshadow1, #content #cnt2 .moonshadow2, #content #cnt2 .moonshadow3 {
+    width: 30%;
+    bottom: 6%; }
+
+  #content #cnt4 #cnt4-2 .cntwrap {
+    height: 80vh; }
+    #content #cnt4 #cnt4-2 .cntwrap.fix > ul {
+      position: relative;
+      top: 80%;
+      margin-top: -300px;
+      margin-left: 0;
+      width: validate;
+      height: 600px; }
+      #content #cnt4 #cnt4-2 .cntwrap.fix > ul > li {
+        float: left;
+        width: 400px;
+        height: 600px;
+        line-height: 600px; }
+        #content #cnt4 #cnt4-2 .cntwrap.fix > ul > li h3 {
+          font-size: 5rem;
+          left: 10%; }
+        #content #cnt4 #cnt4-2 .cntwrap.fix > ul > li p {
+          font-size: 3rem;
+          left: 40%; }
+
+  #content #cnt6 #modal1 .etc a {
+    font-size: 1rem;
+    padding-right: 0.3rem; } }
+@media all and (max-width: 760px) {
+  #content > #cnt4 > h3, #content > #cnt5 > h3, #content > #cnt6 > h3 {
+    left: 30%; }
+
+  #content #cnt3 #main-ctr h1 {
+    font-size: 2.5rem; }
+
+  #content #cnt5 .smallstudio {
+    width: 90%;
+    left: 5%; }
+    #content #cnt5 .smallstudio .ss-title li {
+      top: 5rem; }
+      #content #cnt5 .smallstudio .ss-title li h3 {
+        font-size: 4rem;
+        padding: 30px 0; }
+      #content #cnt5 .smallstudio .ss-title li p {
+        font-size: 3rem;
+        line-height: 4rem; }
+
+  #content #cnt6 .modal_cnt .etc #tit1 {
+    width: 100%;
+    text-align: left; }
+  #content #cnt6 .modal_cnt .etc a {
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+    text-align: center; }
+
+  #content #cnt6 .cloud .linkcloud li:nth-of-type(1) {
+    left: 5%; }
+  #content #cnt6 .cloud .linkcloud li:nth-of-type(2) {
+    left: 30%; }
+  #content #cnt6 .cloud .linkcloud li:nth-of-type(3) {
+    left: 5%; }
+  #content #cnt6 .cloud .linkcloud li:nth-of-type(4) {
+    left: 30%; }
+
+  #content #cnt6 .cloud .cloud_1, #content #cnt6 .cloud .cloud_2, #content #cnt6 .cloud .cloud_3 {
+    width: 60%; }
+
+  #content #cnt7 .wave img:nth-of-type(1) {
+    bottom: -5rem; }
+  #content #cnt7 .wave img:nth-of-type(2) {
+    bottom: -5rem; }
+  #content #cnt7 .wave img:nth-of-type(3) {
+    width: 70%;
+    top: 60%; }
+
+  #content #cnt6 .linkcloud li {
+    width: 60%;
+    height: 10%; } }
+@media all and (max-width: 640px) {
+  #content #cnt6 .modal_cnt {
+    width: 95%; }
+    #content #cnt6 .modal_cnt .etc #tit1 {
+      width: 100%;
+      text-align: left; }
+    #content #cnt6 .modal_cnt .etc a {
+      font-size: 1rem;
+      padding-right: 0.5rem;
+      text-align: right; }
+
+  #content #cnt3 #main-ctr h1 {
+    font-size: 2rem; }
+
+  #content #cnt2 #moon .moon {
+    width: 40%;
+    bottom: 16%; }
+
+  #content #cnt2 .moonshadow1, #content #cnt2 .moonshadow2, #content #cnt2 .moonshadow3 {
+    bottom: 11%;
+    width: 30%; }
+
+  #content #cnt7 h3 {
+    bottom: 10rem;
+    font-size: 4rem; } }
+@media all and (max-width: 480px) {
+  #content #cnt7 h3 {
+    font-size: 3rem; }
+
+  #content #cnt7 .wave img:nth-of-type(1) {
+    bottom: -4rem; }
+  #content #cnt7 .wave img:nth-of-type(2) {
+    bottom: -4rem; } }
 /* @media screen and (orientation: portrait) {
     //모바일 기기의 회전 속성 : portrait(세로 길게)
 }
