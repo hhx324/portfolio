@@ -20,38 +20,62 @@ $(document).ready(function () {
   }
 
 /* header */
+  var $gnb = $('#gnb');
 
-//메뉴열기 클릭
-$('.btn_menu').on('click', function () {
-  if ($(this).hasClass('active')) { //닫기
-    $gnb.stop().animate({left: '100%'}, 300, function () {
-      $(this).css({visibility: 'hidden'}).find('ul li.on').removeClass('on').children('ul').stop().slideUp();
-    });
+  //메뉴열기 클릭
+  $('.btn_menu').on('click', function () {
+    if ($(this).hasClass('active')) { //닫기
+      $gnb.stop().animate({left: '50%'}, 300, function () {
+        $(this).css({visibility: 'hidden'}).find('ul li.on').removeClass('on').children('ul').stop().slideUp();
+      });
 
-    $(this).removeClass('active').find('blind').text('메뉴 열기');
-  } else {    //열기
-    var scrollMove = scrollT;  //click시 스크롤을 저장
+      $(this).removeClass('active').find('blind').text('메뉴 열기');
+    } else {    //열기
+      var scrollMove = scrollT;  //click시 스크롤을 저장
+      console.log(scrollMove);
 
-    $(this).addClass('active').find('.sr-only').text('메뉴 닫기');
+      $(this).addClass('active').find('blind').text('메뉴 닫기');
 
-    var $first = $gnb.find('[data-link="first"]');
-    var $last = $gnb.find('[data-link="last"]');
+      //가정처음과 마지막에서 #gnb 외부로 포커스가 나가지 않도록 제어
+      var $first = $gnb.find('[data-link="first"]');
+      var $last = $gnb.find('[data-link="last"]');
 
-    $gnb.css({visibility: 'visible'}).stop().animate({left: 0}, 300, function () {
-      $first.focus();   //대상 엘리먼트에 포커스를 강제로 이동
-    });
+      $gnb.css({visibility: 'visible'}).stop().animate({left: '50%'}, 300, function () {
+        $first.focus();   //대상 엘리먼트에 포커스를 강제로 이동
+      });
 
-    //첫번째 a 태그에서 shift+tab을 눌러 header의 영역으로 포커스가 이동하지 못하게 제한
-    $first.on('keydown', function (e) {
-      console.log(e.keyCode);   //tab을 클릭하면 9를 반환
-      if ( e.shiftKey && e.keyCode == 9) {
-        e.preventDefault();   //포커스 이동을 강제로 제한
-        $last.focus();        //처음 포커스로 이동, #gnbWrap을 벗어나지 않고 순환됨
+      //첫번째 a 태그에서 shift+tab을 눌러 header의 영역으로 포커스가 이동하지 못하게 제한
+      $first.on('keydown', function (e) {
+        console.log(e.keyCode);   //tab을 클릭하면 9를 반환
+        if ( e.shiftKey && e.keyCode == 9) {
+          e.preventDefault();   //포커스 이동을 강제로 제한
+          $last.focus();        //처음 포커스로 이동, #gnbWrap을 벗어나지 않고 순환됨
+        }
+      });
+      //마지막 버튼 태그에서 tab을 눌러 container의 영역으로 포커스가 이동하지 못하게 제한
+      $last.on('keydown', function (e) {
+        if ( !e.shiftKey && e.keyCode == 9) {
+          e.preventDefault();
+          $('.btn_menu').focus();
+        }
+      });
+
+    }
+
+    //depth1 a click
+    $gnb.find('>ul>li>a').on('click', function () {
+      if ($(this).next().size() == 0) {	//depth1 <a>만 있는 경우
+        //console.log($(this).next().size());
+        location.href=$(this).attr("href");
+      }else {								//depth2 <ul>도 있는 경우
+        //console.log($(this).next().size());
+        $(this).next().stop().slideToggle("fast").parent().toggleClass('on');
       }
-    });
 
-  }
-});
+      return false;
+    });
+  });
+
 
   /* cnt3 */
   var mainCtr = $("#main-ctr"),
@@ -231,5 +255,94 @@ $('#modal3 a').eq(2).on('click', function (e) {
   $('#modal3 img').eq(1).css('display', 'block').siblings('img, video').css('display', 'none');
 });
 
+});
+
+$(document).ready(function() {
+  /* === 열기 버튼 클릭시
+  1) 스크린리더에서는 열려진 모달 말고는 접근하지 못하도록 제어(보조기술이 미구현 되어서 추가해 줌)
+      aria-hidden="true" inert(비활성, 불활성)
+  2) #dim 동적 생성
+  3) resize 이벤트로 열려질 모달의 위치 제어
+  4) #dim, 모달 컨텐츠를 보여지게 처리, 첫번째 링크에 포커스 강제 이동
+
+  5) 접근성을 위해 추가 : 닫기 버튼을 누르기 전까지 포커스는 모달 내부에 존재해야 함
+  첫번째 링크에서 shift+tab을 누르면 가장 마지막으로 포커스 강제이동
+  마지막 링크에서 shift(X)+tab을 누르면 가장 처음으로 포커스 강제이동 */
+  $('.open_btn').on('click', function () {
+      var $openBtn = $(this);   //모달 닫기를 클릭시 열어준 버튼에 포커스 강제 이동
+      var $mdCnt = $( $(this).data('href') ); //$()로 감싸서 선택자로 변경
+      var $closeBtn = $mdCnt.find('.close_btn'); //열려진 모달 내부의 닫기버튼
+      var $first = $mdCnt.find('[data-link="first"]'); //열려진 모달 내부의 첫번째 포커스가 갈 대상
+      var $last = $mdCnt.find('[data-link="last"]'); //열려진 모달 내부의 마지막 포커스가 갈 대상
+      console.log($mdCnt, typeof $mdCnt);
+      var timer = 0; //누적되는 resize 이벤트를 제어 => 성능 향상
+
+      //1) 스크린리더에서는 열려진 모달 말고는 접근하지 못하도록 제어
+      $mdCnt.siblings().attr({'aria-hidden': true, inert: ''});
+
+      //2) #dim 동적 생성
+      $mdCnt.before('<div id="dim"></div>');
+      var $dim = $('#dim');
+
+      //3) resize 이벤트로 열려질 모달의 위치 제어
+      $(window).on('resize', function () {
+          clearTimeout(timer);
+
+          timer = setTimeout(function () {
+              //문서가운데 위치(가로) : (윈도창의 너비-열려질모달의가로) / 2
+              var xpos = ($(this).width() - $mdCnt.outerWidth()) / 2;
+              var ypos = ($(this).height() - $mdCnt.outerHeight()) / 2;
+              console.log(xpos, ypos);
+              $mdCnt.css({left: xpos, top: ypos});
+          }, 50);
+      });
+      $(window).trigger('resize');
+
+      //4) #dim, 모달 컨텐츠를 보여지게 처리, 첫번째 링크에 포커스 강제 이동
+      $dim.stop().fadeIn().next().css('visibility', 'visible');
+      $first.focus();
+
+      //5-1) 접근성 추가 : 첫번째 링크에서 shift+tab을 누르면 가장 마지막으로 포커스 강제이동
+      $first.on('keydown', function (e) {
+          console.log( e.keyCode ); //tab => 9
+          if (e.shiftKey && e.keyCode == 9) {
+              e.preventDefault();
+              $last.focus();
+          }
+      });
+
+      //5-2) 접근성 추가 : 마지막 링크에서 shift(X)+tab을 누르면 가장 처음으로 포커스 강제이동
+      $last.on('keydown', function (e) {
+          console.log( e.keyCode ); //tab => 9
+          if ( !e.shiftKey && e.keyCode == 9 ) {
+              e.preventDefault();
+              $first.focus();
+          }
+      });
+
+      // 닫기버튼 클릭시
+      $closeBtn.on('click',function () {
+          /* 1) $dim 투명도 0으로 사라지기
+          (완료함수로 remove()로 제거), 모달컨텐츠 숨기기(visibility) */
+          $dim.stop().fadeOut('fast',function () {
+              $(this).remove();
+          });
+          /* 2) 모달상세컨텐츠의 나머지 형제들을 스크린리더에서 
+          접근할수 있도록 되돌리기(제거 - aria-hidden, inert) */
+          $mdCnt.css('visibility','hidden').siblings().removeAttr('aria-hidden inert');
+          // 3) 열기 버튼으로 포커스 강제 이동
+          $openBtn.focus();
+      });
+      // #dim을 클릭해도 모달창 닫히기
+      $dim.on('click', function() {
+          $closeBtn.click();
+      });
+
+      // esc 키보드를 클릭하면 모달 닫기
+      $(window).on('keydown',function(e) {
+          console.log(e.keyCode); //27
+          if (e.keyCode==27) $closeBtn.click();
+      });
+  });
 });
 
