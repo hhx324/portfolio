@@ -1,23 +1,24 @@
 $(document).ready(function () {
-  /* cnt1 스타워즈 효과 */
-  var byline = document.getElementById('byline'); // Find the H2
-  bylineText = byline.innerHTML; // Get the content of the H2
-  bylineArr = bylineText.split(''); // Split content into array
-  byline.innerHTML = ''; // Empty current content
 
-  var span; // Create variables to create elements
-  var letter;
+/* cnt1 스타워즈 효과 */
+var byline = document.getElementById('byline');  	// Find the H2
+bylineText = byline.innerHTML;										// Get the content of the H2
+bylineArr = bylineText.split('');									// Split content into array
+byline.innerHTML = '';														// Empty current content
 
-  for (i = 0; i < bylineArr.length; i++) { // Loop for every letter
-      span = document.createElement("span"); // Create a <span> element
-      letter = document.createTextNode(bylineArr[i]); // Create the letter
-      if (bylineArr[i] == ' ') { // If the letter is a space...
-          byline.appendChild(letter); // ...Add the space without a span
-      } else {
-          span.appendChild(letter); // Add the letter to the span
-          byline.appendChild(span); // Add the span to the h2
-      }
+var span;					// Create variables to create elements
+var letter;
+
+for(i=0;i<bylineArr.length;i++){									// Loop for every letter
+  span = document.createElement("span");					// Create a <span> element
+  letter = document.createTextNode(bylineArr[i]);	// Create the letter
+  if(bylineArr[i] == ' ') {												// If the letter is a space...
+    byline.appendChild(letter);					// ...Add the space without a span
+  } else {
+		span.appendChild(letter);						// Add the letter to the span
+  	byline.appendChild(span); 					// Add the span to the h2
   }
+}
 
 /* header */
   var $gnb = $('#gnb');
@@ -182,46 +183,21 @@ else {
 
 /* #cnt5 bigstudio bs-big bs-small smallstudio ss-title ss-button*/
 
-$('.bigstudio .bs-big button').eq(0).on('click', function () {
-$('.bs-small li').eq(0).toggleClass('f').siblings().removeClass('f');
-$('.smallstudio .ss-title li').eq(0).toggleClass('f').siblings().removeClass('f');
+$('.bigstudio .bs-big button').on('click', function(){
+  var index = $(this).parent().index();
+  console.log(index);
+  $('.bs-small li').eq(index).addClass('f').siblings().removeClass('f');
+  $('.smallstudio .ss-title li').eq(index).slideDown().siblings().slideUp();
+  $('.explain li').eq(index).slideDown().siblings().slideUp();
 });
-$('.bigstudio .bs-big button').eq(1).on('click', function () {
-$('.bs-small li').eq(1).toggleClass('f').siblings().removeClass('f');
-$('.smallstudio .ss-title li').eq(1).toggleClass('f').siblings().removeClass('f');
+$('.ss-button li button').on('click', function(){
+  var index = $(this).parent().index();
+  console.log(index);
+  $('.bs-small li').eq(index).addClass('f').siblings().removeClass('f');
+  $('.smallstudio .ss-title li').eq(index).slideDown().siblings().slideUp();
+  $('.explain li').eq(index).slideDown().siblings().slideUp();
 });
-$('.bigstudio .bs-big button').eq(2).on('click', function () {
-$('.bs-small li').eq(2).toggleClass('f').siblings().removeClass('f');
-$('.smallstudio .ss-title li').eq(2).toggleClass('f').siblings().removeClass('f');
-});
-$('.bigstudio .bs-big button').eq(3).on('click', function () {
-$('.bs-small li').eq(3).toggleClass('f').siblings().removeClass('f');
-$('.smallstudio .ss-title li').eq(3).toggleClass('f').siblings().removeClass('f');
-});
-$('.bigstudio .bs-big button').eq(4).on('click', function () {
-$('.bs-small li').eq(4).toggleClass('f').siblings().removeClass('f');
-$('.smallstudio .ss-title li').eq(4).toggleClass('f').siblings().removeClass('f');
-});
-$('.ss-button li button').eq(0).on('click', function () {
-$('.bs-small li').eq(0).toggleClass('f').siblings().removeClass('f');
-$('.smallstudio .ss-title li').eq(0).toggleClass('f').siblings().removeClass('f');
-});
-$('.ss-button li button').eq(1).on('click', function () {
-$('.bs-small li').eq(1).toggleClass('f').siblings().removeClass('f');
-$('.smallstudio .ss-title li').eq(1).toggleClass('f').siblings().removeClass('f');
-});
-$('.ss-button li button').eq(2).on('click', function () {
-$('.bs-small li').eq(2).toggleClass('f').siblings().removeClass('f');
-$('.smallstudio .ss-title li').eq(2).toggleClass('f').siblings().removeClass('f');
-});
-$('.ss-button li button').eq(3).on('click', function () {
-$('.bs-small li').eq(3).toggleClass('f').siblings().removeClass('f');
-$('.smallstudio .ss-title li').eq(3).toggleClass('f').siblings().removeClass('f');
-});
-$('.ss-button li button').eq(4).on('click', function () {
-$('.bs-small li').eq(4).toggleClass('f').siblings().removeClass('f');
-$('.smallstudio .ss-title li').eq(4).toggleClass('f').siblings().removeClass('f');
-});
+
 
 /* cnt6 */
 $('#modal1 a').on('click', function (e) {

@@ -189,37 +189,26 @@ body {
 #cnt1 {
   position: relative;
   height: 1080px;
-  width: 100%;
   background-image: url("../images/cnt1/bg.png"); }
   #cnt1 .cnt1_1 {
     position: relative;
-    top: 20%;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    height: 50%; }
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%; }
 
 .portfolio {
-  top: 5%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  top: 20%;
+  left: 5%;
   -webkit-animation: star 4s ease-out;
   -moz-animation: star 4s ease-out;
   -o-animation: star 4s ease-out;
-  animation: star 4s ease-out; }
+  animation: star 4s ease-out;
+  text-align: center; }
 
 .foryou {
   top: 55%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  left: 5%;
   -webkit-animation: wars 4s ease-out;
   -moz-animation: wars 4s ease-out;
   -o-animation: wars 4s ease-out;
@@ -227,13 +216,8 @@ body {
 
 .byline {
   font-family: star;
-  top: 37%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  top: 42%;
+  left: 20%;
   -webkit-animation: move-byline 4s linear;
   -moz-animation: move-byline 4s linear;
   -o-animation: move-byline 4s linear;
@@ -373,6 +357,16 @@ body {
   background-image: url("../images/cnt2/bg.png");
   overflow: hidden;
   z-index: -1; }
+  #cnt2 .moon1 {
+    display: none;
+    top: 50%;
+    right: 0;
+    -webkit-animation: cloud 20s linear infinite;
+    -moz-animation: cloud 20s linear infinite;
+    -o-animation: cloud 20s linear infinite;
+    animation: cloud 20s linear infinite; }
+  #cnt2 #moon {
+    height: 50%; }
   #cnt2 .moon {
     bottom: 12%;
     right: -10%;
@@ -393,7 +387,8 @@ body {
   -webkit-animation: cloud 50s linear infinite;
   -moz-animation: cloud 50s linear infinite;
   -o-animation: cloud 50s linear infinite;
-  animation: cloud 50s linear infinite; }
+  animation: cloud 50s linear infinite;
+  max-width: none; }
 
 @-webkit-keyframes cloud {
   0% {
@@ -1026,6 +1021,10 @@ body {
           position: absolute;
           bottom: 0;
           left: 0; }
+          #cnt4-2 .cntwrap > ul li:nth-of-type(14) div h3 {
+            position: absolute;
+            bottom: -5rem;
+            left: 0; }
           #cnt4-2 .cntwrap > ul li:nth-of-type(14) div p {
             position: absolute;
             top: 8rem;
@@ -1048,9 +1047,13 @@ body {
           position: absolute;
           bottom: 0;
           left: 0; }
+          #cnt4-2 .cntwrap > ul li:nth-of-type(16) div h3 {
+            position: absolute;
+            bottom: 20%;
+            left: 0; }
           #cnt4-2 .cntwrap > ul li:nth-of-type(16) div p {
             position: absolute;
-            top: 8rem;
+            bottom: 0;
             left: 15rem; }
       #cnt4-2 .cntwrap > ul li:nth-of-type(17) {
         background: url("../images/cnt4/lyric2.png") no-repeat center 65%;
@@ -1085,61 +1088,83 @@ body {
       position: absolute; }
       #cnt5 .bigstudio li.choice {
         opacity: 1; }
-    #cnt5 .bigstudio .bs-big li:nth-of-type(1) {
+    #cnt5 .bigstudio .bs-big > li:nth-of-type(1) {
       bottom: 0;
       right: 0; }
-    #cnt5 .bigstudio .bs-big li:nth-of-type(2) {
+    #cnt5 .bigstudio .bs-big > li:nth-of-type(2) {
       top: 30%;
       left: 5%;
       background: linear-gradient(to bottom right, #fcc, #ff99cc);
       border: 10px solid #fff;
       border-radius: 25px; }
-    #cnt5 .bigstudio .bs-big li:nth-of-type(3) {
+    #cnt5 .bigstudio .bs-big > li:nth-of-type(3) {
       top: 40%;
       left: 25%;
       background: linear-gradient(to bottom right, #fcc, #ff99cc);
       border: 10px solid #fff;
       border-radius: 25px; }
-    #cnt5 .bigstudio .bs-big li:nth-of-type(4) {
+    #cnt5 .bigstudio .bs-big > li:nth-of-type(4) {
       top: 45%;
       left: 43%;
       background: linear-gradient(to bottom right, #fcc, #ff99cc);
       border: 10px solid #fff;
       border-radius: 25px; }
-    #cnt5 .bigstudio .bs-big li:nth-of-type(5) {
+    #cnt5 .bigstudio .bs-big > li:nth-of-type(5) {
       top: 40%;
       left: 65%;
       background: linear-gradient(to bottom right, #fcc, #ff99cc);
       border: 10px solid #fff;
       border-radius: 25px; }
-    #cnt5 .bigstudio .bs-big li:nth-of-type(6) {
+    #cnt5 .bigstudio .bs-big > li:nth-of-type(6) {
       bottom: 5%;
       left: 5%;
       font-size: 1.5rem; }
-    #cnt5 .bigstudio .bs-small li {
+    #cnt5 .bigstudio .bs-big .explain {
       display: none; }
-    #cnt5 .bigstudio .bs-small .f {
-      display: block;
-      -webkit-animation: f 1s linear;
-      -moz-animation: f 1s linear;
-      -o-animation: f 1s linear;
-      animation: f 1s linear; }
-    #cnt5 .bigstudio .bs-small li:nth-of-type(1) {
+      #cnt5 .bigstudio .bs-big .explain li {
+        width: 100%;
+        height: 20%;
+        font-size: 2rem;
+        bottom: 3%;
+        display: none; }
+        #cnt5 .bigstudio .bs-big .explain li.f {
+          display: block; }
+        #cnt5 .bigstudio .bs-big .explain li h3 {
+          position: absolute;
+          top: 0;
+          left: 10%; }
+        #cnt5 .bigstudio .bs-big .explain li p {
+          position: absolute;
+          top: 30%;
+          left: 10%;
+          font-size: 1.7rem; }
+    #cnt5 .bigstudio .bs-small {
       top: 12%;
-      left: 70%;
-      width: 170%; }
-    #cnt5 .bigstudio .bs-small li:nth-of-type(2) {
-      top: 12%;
-      left: -10%; }
-    #cnt5 .bigstudio .bs-small li:nth-of-type(3) {
-      top: 12%;
-      left: 10%; }
-    #cnt5 .bigstudio .bs-small li:nth-of-type(4) {
-      top: 12%;
-      left: 32%; }
-    #cnt5 .bigstudio .bs-small li:nth-of-type(5) {
-      top: 12%;
-      left: 50%; }
+      left: 0; }
+      #cnt5 .bigstudio .bs-small li {
+        display: none; }
+      #cnt5 .bigstudio .bs-small .f {
+        display: block;
+        -webkit-animation: f 1s linear;
+        -moz-animation: f 1s linear;
+        -o-animation: f 1s linear;
+        animation: f 1s linear; }
+      #cnt5 .bigstudio .bs-small li:nth-of-type(1) {
+        top: 12%;
+        left: 70%;
+        width: 170%; }
+      #cnt5 .bigstudio .bs-small li:nth-of-type(2) {
+        top: 12%;
+        left: -10%; }
+      #cnt5 .bigstudio .bs-small li:nth-of-type(3) {
+        top: 12%;
+        left: 10%; }
+      #cnt5 .bigstudio .bs-small li:nth-of-type(4) {
+        top: 12%;
+        left: 32%; }
+      #cnt5 .bigstudio .bs-small li:nth-of-type(5) {
+        top: 12%;
+        left: 50%; }
   #cnt5 .smallstudio {
     top: 20%;
     left: 5%;
@@ -1742,6 +1767,9 @@ body {
     .etc a:hover {
       text-decoration: underline; } }
 @media all and (max-width: 1580px) {
+  .cnt1_1 {
+    left: 5%; }
+
   .byline {
     font-size: 4rem; }
 
@@ -1806,18 +1834,16 @@ body {
 
   #content #cnt1 .cnt1_1 .portfolio {
     top: 20%;
-    width: 80%;
-    left: 25%; }
+    left: 0; }
 
   .foryou {
-    width: 80%;
-    left: 25%; }
+    left: 0; }
 
   .byline {
-    font-size: 3.2rem;
-    top: 43%;
-    left: 35%;
-    text-align: right; }
+    font-size: 5vw;
+    top: 41%;
+    left: 12%;
+    text-align: center; }
 
   /*  #cnt4 #cnt4-1{ left: 30%;
        li:nth-of-type(2){right: 50%;}} */
@@ -1898,61 +1924,48 @@ body {
 
   #content #cnt1 .cnt1_1 .portfolio {
     top: 20%;
-    width: 80%;
-    left: 20%; }
+    left: 0; }
 
-  #content #cnt1 .cnt1_1 .foryou {
-    width: 80%;
-    left: 20%;
-    top: 40%; }
+  .foryou {
+    left: 0; }
 
   .byline {
-    font-size: 2.5rem;
-    top: 60%;
-    left: 37%;
+    font-size: 5vw;
+    top: 41%;
+    left: 12%;
     text-align: center; }
 
   #content #cnt2 h2 {
     font-size: 5rem;
     line-height: 5rem; }
 
-  #content #cnt2 .moon {
-    width: 50%;
-    opacity: .7; }
-
-  #content #cnt2 .moonshadow1, #content #cnt2 .moonshadow2, #content #cnt2 .moonshadow3 {
-    width: 30%;
-    bottom: 3%; }
-
   #cnt5 .bigstudio {
-    display: none; }
+    left: 0;
+    width: 100%;
+    height: 40%; }
+    #cnt5 .bigstudio .bs-big .explain {
+      display: block; }
+    #cnt5 .bigstudio .bs-small {
+      top: 13.5%;
+      left: 2%; }
+      #cnt5 .bigstudio .bs-small li:nth-of-type(1) {
+        top: 12%;
+        left: 70%; }
+      #cnt5 .bigstudio .bs-small li:nth-of-type(2) {
+        top: 12%;
+        left: -10%; }
+      #cnt5 .bigstudio .bs-small li:nth-of-type(3) {
+        top: 12%;
+        left: 10%; }
+      #cnt5 .bigstudio .bs-small li:nth-of-type(4) {
+        top: 12%;
+        left: 32%; }
+      #cnt5 .bigstudio .bs-small li:nth-of-type(5) {
+        top: 12%;
+        left: 50%; }
 
   #content #cnt5 .smallstudio {
-    width: 80%;
-    left: 10%; }
-    #content #cnt5 .smallstudio .ss-title li {
-      top: 2rem; }
-      #content #cnt5 .smallstudio .ss-title li h3 {
-        font-size: 5rem;
-        padding: 30px 0; }
-      #content #cnt5 .smallstudio .ss-title li p {
-        font-size: 4rem;
-        line-height: 5rem; }
-    #content #cnt5 .smallstudio .ss-button li:nth-of-type(1) {
-      left: 5%;
-      text-align: center; }
-    #content #cnt5 .smallstudio .ss-button li:nth-of-type(2) {
-      left: 25%;
-      text-align: center; }
-    #content #cnt5 .smallstudio .ss-button li:nth-of-type(3) {
-      left: 45%;
-      text-align: center; }
-    #content #cnt5 .smallstudio .ss-button li:nth-of-type(4) {
-      left: 65%;
-      text-align: center; }
-    #content #cnt5 .smallstudio .ss-button li:nth-of-type(5) {
-      right: 5%;
-      text-align: center; }
+    display: none; }
 
   /* #content #cnt4 #cnt4-1{bottom: 10%} */
   #content #cnt6 .modal_cnt .etc h3 {
@@ -2008,9 +2021,6 @@ body {
     #content #cnt6 .cloud_3 img:nth-of-type(4) {
       left: 20%; } }
 @media all and (max-width: 1100px) {
-  #content #cnt2 .moonshadow1, #content #cnt2 .moonshadow2, #content #cnt2 .moonshadow3 {
-    bottom: 4%; }
-
   #content #cnt7 .wave img:nth-of-type(1) {
     position: absolute;
     bottom: -10rem;
@@ -2028,8 +2038,20 @@ body {
     -o-animation: wave1 2s linear infinite;
     animation: wave1 2s linear infinite; } }
 @media all and (max-width: 1000px) {
-  #content #cnt2 .moonshadow1, #content #cnt2 .moonshadow2, #content #cnt2 .moonshadow3 {
-    bottom: 5%; }
+  #content #cnt5 .bigstudio {
+    display: none; }
+
+  #content #cnt5 .smallstudio {
+    display: block;
+    width: 80%;
+    left: 10%;
+    height: 45%; }
+    #content #cnt5 .smallstudio .ss-button {
+      left: 0;
+      top: 0; }
+      #content #cnt5 .smallstudio .ss-button li {
+        bottom: 5%;
+        text-indent: 20%; }
 
   #content #cnt6 .modal_cnt .etc h3 {
     font-size: 2.5rem; }
@@ -2042,6 +2064,20 @@ body {
     #content #cnt6 .modal_cnt .etc a:hover {
       text-decoration: underline; } }
 @media all and (max-width: 980px) {
+  #content #cnt1 .cnt1_1 .portfolio {
+    top: 20%;
+    left: 0; }
+
+  .foryou {
+    top: 40%;
+    left: 0; }
+
+  .byline {
+    font-size: 5vw;
+    top: 33%;
+    left: 12%;
+    text-align: center; }
+
   #content > #cnt4 > h3, #content > #cnt5 > h3, #content > #cnt6 > h3 {
     position: absolute;
     left: 20%;
@@ -2057,10 +2093,6 @@ body {
 
   .para {
     display: none; }
-
-  #content #cnt2 .moonshadow1, #content #cnt2 .moonshadow2, #content #cnt2 .moonshadow3 {
-    width: 30%;
-    bottom: 6%; }
 
   #content #cnt4 #cnt4-2 .cntwrap {
     height: 80vh; }
@@ -2087,23 +2119,79 @@ body {
     font-size: 1rem;
     padding-right: 0.3rem; } }
 @media all and (max-width: 760px) {
+  #content #cnt1 .cnt1_1 .portfolio {
+    top: 25%;
+    left: 0; }
+
+  .foryou {
+    top: 40%;
+    left: 0; }
+
+  .byline {
+    font-size: 5vw;
+    top: 35%;
+    left: 12%;
+    text-align: center; }
+
+  #content #cnt2 h2 {
+    font-size: 4rem; }
+
+  .star1 {
+    top: 50%;
+    right: 0;
+    z-index: -1;
+    -webkit-animation: star1 2s linear infinite;
+    -moz-animation: star1 2s linear infinite;
+    -o-animation: star1 2s linear infinite;
+    animation: star1 2s linear infinite; }
+
+  .star2 {
+    top: 40%;
+    right: 0;
+    z-index: -1;
+    -webkit-animation: star2 3s linear infinite;
+    -moz-animation: star2 3s linear infinite;
+    -o-animation: star2 3s linear infinite;
+    animation: star2 3s linear infinite; }
+
   #content > #cnt4 > h3, #content > #cnt5 > h3, #content > #cnt6 > h3 {
     left: 30%; }
 
   #content #cnt3 #main-ctr h1 {
     font-size: 2.5rem; }
 
+  #cnt2 .moon, #cnt2 .moonshadow1, #cnt2 .moonshadow2, #cnt2 .moonshadow3 {
+    display: none; }
+
+  #cnt2 .moon1 {
+    display: block; }
+
+  #content #cnt2 .cloud {
+    max-width: 150%; }
+
+  #content #cnt4 #cnt4-2 .cntwrap.fix > ul > li {
+    width: 300px; }
+    #content #cnt4 #cnt4-2 .cntwrap.fix > ul > li h3 {
+      font-size: 3.5rem; }
+    #content #cnt4 #cnt4-2 .cntwrap.fix > ul > li p {
+      font-size: 2.5rem; }
+
   #content #cnt5 .smallstudio {
-    width: 90%;
-    left: 5%; }
-    #content #cnt5 .smallstudio .ss-title li {
-      top: 5rem; }
-      #content #cnt5 .smallstudio .ss-title li h3 {
-        font-size: 4rem;
-        padding: 30px 0; }
-      #content #cnt5 .smallstudio .ss-title li p {
-        font-size: 3rem;
-        line-height: 4rem; }
+    display: block;
+    width: 80%;
+    left: 10%;
+    height: 40%;
+    background: url("../images/cnt5/스튜디오(작).png") center 50%; }
+    #content #cnt5 .smallstudio h3 {
+      font-size: 3rem; }
+    #content #cnt5 .smallstudio p {
+      font-size: 2.5rem; }
+    #content #cnt5 .smallstudio .ss-button {
+      left: 0;
+      top: 0; }
+      #content #cnt5 .smallstudio .ss-button li {
+        bottom: 3%;
+        text-indent: 10%; }
 
   #content #cnt6 .modal_cnt .etc #tit1 {
     width: 100%;
@@ -2137,6 +2225,63 @@ body {
     width: 60%;
     height: 10%; } }
 @media all and (max-width: 640px) {
+  #content #cnt1 .cnt1_1 {
+    top: 0; }
+
+  #content #cnt1 .cnt1_1 .portfolio {
+    top: 25%;
+    left: 0; }
+
+  .foryou {
+    top: 40%;
+    left: 0; }
+
+  .byline {
+    font-size: 6vw;
+    top: 33%;
+    left: 5%;
+    text-align: center; }
+
+  .star1 {
+    top: 60%; }
+
+  .star2 {
+    top: 70%; }
+
+  #content #cnt2 .cloud {
+    top: 30%;
+    max-width: 200%; }
+
+  #content #cnt2 .moon1 {
+    width: 200%;
+    right: -50rem; }
+
+  #content #cnt4 #cnt4-1 li:nth-of-type(2) {
+    bottom: 25%; }
+
+  #content #cnt5 .smallstudio {
+    display: block;
+    width: 100%;
+    left: 0;
+    height: 40%;
+    background: url("../images/cnt5/스튜디오(작).png") center 40%; }
+    #content #cnt5 .smallstudio .ss-title img {
+      vertical-align: bottom; }
+    #content #cnt5 .smallstudio .ss-title h3 {
+      font-size: 3rem;
+      height: 3rem;
+      line-height: 3.5rem; }
+    #content #cnt5 .smallstudio .ss-title p {
+      font-size: 2.5rem;
+      height: 2.5rem;
+      line-height: 3rem; }
+    #content #cnt5 .smallstudio .ss-button {
+      left: 0;
+      top: 0; }
+      #content #cnt5 .smallstudio .ss-button li {
+        bottom: 1%;
+        text-indent: 10%; }
+
   #content #cnt6 .modal_cnt {
     width: 95%; }
     #content #cnt6 .modal_cnt .etc #tit1 {
@@ -2150,18 +2295,54 @@ body {
   #content #cnt3 #main-ctr h1 {
     font-size: 2rem; }
 
-  #content #cnt2 #moon .moon {
-    width: 40%;
-    bottom: 16%; }
-
-  #content #cnt2 .moonshadow1, #content #cnt2 .moonshadow2, #content #cnt2 .moonshadow3 {
-    bottom: 11%;
-    width: 30%; }
-
   #content #cnt7 h3 {
     bottom: 10rem;
     font-size: 4rem; } }
 @media all and (max-width: 480px) {
+  #content #cnt1 .cnt1_1 .portfolio {
+    top: 30%;
+    left: 0; }
+
+  .foryou {
+    top: 40%;
+    left: 0; }
+
+  .byline {
+    font-size: 5vw;
+    top: 36%;
+    left: 12%;
+    text-align: center; }
+
+  #content #cnt2 .cloud {
+    top: 20%;
+    max-width: 300%; }
+
+  #content #cnt4 #cnt4-1 li:nth-of-type(2) {
+    bottom: 27%;
+    left: 18%; }
+
+  #content #cnt5 .smallstudio .ss-title li {
+    position: absolute;
+    height: 30%;
+    bottom: -20rem; }
+  #content #cnt5 .smallstudio .ss-title img {
+    vertical-align: bottom; }
+  #content #cnt5 .smallstudio .ss-title h3 {
+    font-size: 2rem;
+    height: 2rem;
+    line-height: 2.5rem; }
+  #content #cnt5 .smallstudio .ss-title p {
+    font-size: 1.7rem;
+    height: 1.7rem;
+    line-height: 2rem; }
+  #content #cnt5 .smallstudio .ss-button li {
+    bottom: 3%; }
+
+  #content #cnt2 .moon1 {
+    width: 150%;
+    right: -10rem;
+    bottom: -30rem; }
+
   #content #cnt7 h3 {
     font-size: 3rem; }
 
@@ -2169,6 +2350,17 @@ body {
     bottom: -4rem; }
   #content #cnt7 .wave img:nth-of-type(2) {
     bottom: -4rem; } }
+@media all and (max-width: 360px) {
+  #content #cnt2 h2 {
+    font-size: 2.5rem;
+    line-height: 3rem; }
+
+  #content #cnt4 #cnt4-1 {
+    text-indent: 50px; }
+
+  #content #cnt4 #cnt4-1 li:nth-of-type(2) {
+    bottom: 25%;
+    left: 20%; } }
 /* @media screen and (orientation: portrait) {
     //모바일 기기의 회전 속성 : portrait(세로 길게)
 }
