@@ -433,6 +433,9 @@ span {display: inline-block;@include animation(spin-letters 4s linear);}}
     img:nth-of-type(even){@include animation(cdown 3s linear infinite);}
     }
     .plane{position: absolute;top: 0;left: 0;width: 100%;height: 30%;@include animation(plane 5s linear infinite);}
+    .fcloud{position: absolute;top: 5%;right: 0;width: 100%;height: 100%;font-size: 3vw;@include animation(fcloud 10s linear infinite);
+    p{position: absolute;top: 1%;left: 15%;font-weight: 600;color:#666;}
+    }
     .linkcloud{position: absolute;top: 0;left: 0;width: 100%;height: 100%;
         li{position: absolute;width: 30%;height: 5%;@include animation(linkcloud 2s linear infinite);
         .detail{font-size: 0rem;transition: all 2s;}
@@ -468,11 +471,15 @@ span {display: inline-block;@include animation(spin-letters 4s linear);}}
             }
         } 
         video{position: absolute;width: 100%;top: 4rem;left: 0;}
-    }
-    #modal3{background:url("../images/cnt2/moon.png")}        
+    }       
     #modal3 video{position: absolute;width: 26%;top: 4rem;left: 34%;}
-    #modal2 img{display: none;}
-    #modal3 li:nth-child(1){display: block;}
+    #modal2 li:nth-child(1){display: block;
+    p{position: absolute;bottom: 0;right:0;font-size: 2vw;background: #666;z-index: 2000;padding: 1vw;}
+    }
+    #modal2 li{display: none;}
+    #modal3 li:nth-child(1){display: block;
+        p{position: absolute;bottom: 0;right:0;font-size: 2vw;background: #666;z-index: 2000;padding: 1vw;}
+    }
     #modal3 li{display: none;}
     .modal_cnt .close_btn{position: fixed;bottom: 0;left: 0;width: 5vw;height: 10vw;line-height: 10vw;color:#fff;
         span{position: absolute;left: 6vw;bottom: 0;font-size: 2vw;height: 2vw;line-height: 2vw;text-align: center;}
@@ -506,6 +513,13 @@ span {display: inline-block;@include animation(spin-letters 4s linear);}}
     50%{transform:translateX(50em) translateY(50em) rotate(10deg);}
     75%{transform:translateX(75em) translateY(75em) rotate(0deg);}
     100%{transform:translateX(115em) translateY(115em) rotate(0deg);}
+}
+@include keyframes(fcloud){
+    0%{transform:translateX(0em) translateY(0em) rotate(0deg);}
+    25%{transform:translateX(10em) translateY(0em) rotate(5deg);}
+    50%{transform:translateX(20em) translateY(0em) rotate(10deg);}
+    75%{transform:translateX(10em) translateY(0em) rotate(-5deg);}
+    100%{transform:translateX(0em) translateY(0em) rotate(0deg);}
 }
 @include keyframes(linkcloud){
     0%{transform:rotate(0deg);}

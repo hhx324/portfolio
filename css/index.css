@@ -1352,6 +1352,23 @@ body {
     -moz-animation: plane 5s linear infinite;
     -o-animation: plane 5s linear infinite;
     animation: plane 5s linear infinite; }
+  #cnt6 .fcloud {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 3vw;
+    -webkit-animation: fcloud 10s linear infinite;
+    -moz-animation: fcloud 10s linear infinite;
+    -o-animation: fcloud 10s linear infinite;
+    animation: fcloud 10s linear infinite; }
+    #cnt6 .fcloud p {
+      position: absolute;
+      top: 1%;
+      left: 15%;
+      font-weight: 600;
+      color: #666; }
   #cnt6 .linkcloud {
     position: absolute;
     top: 0;
@@ -1472,17 +1489,33 @@ body {
       width: 100%;
       top: 4rem;
       left: 0; }
-  #cnt6 #modal3 {
-    background: url("../images/cnt2/moon.png"); }
   #cnt6 #modal3 video {
     position: absolute;
     width: 26%;
     top: 4rem;
     left: 34%; }
-  #cnt6 #modal2 img {
+  #cnt6 #modal2 li:nth-child(1) {
+    display: block; }
+    #cnt6 #modal2 li:nth-child(1) p {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 2vw;
+      background: #666;
+      z-index: 2000;
+      padding: 1vw; }
+  #cnt6 #modal2 li {
     display: none; }
   #cnt6 #modal3 li:nth-child(1) {
     display: block; }
+    #cnt6 #modal3 li:nth-child(1) p {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 2vw;
+      background: #666;
+      z-index: 2000;
+      padding: 1vw; }
   #cnt6 #modal3 li {
     display: none; }
   #cnt6 .modal_cnt .close_btn {
@@ -1645,6 +1678,39 @@ body {
     transform: translateX(75em) translateY(75em) rotate(0deg); }
   100% {
     transform: translateX(115em) translateY(115em) rotate(0deg); } }
+@-webkit-keyframes fcloud {
+  0% {
+    transform: translateX(0em) translateY(0em) rotate(0deg); }
+  25% {
+    transform: translateX(10em) translateY(0em) rotate(5deg); }
+  50% {
+    transform: translateX(20em) translateY(0em) rotate(10deg); }
+  75% {
+    transform: translateX(10em) translateY(0em) rotate(-5deg); }
+  100% {
+    transform: translateX(0em) translateY(0em) rotate(0deg); } }
+@-moz-keyframes fcloud {
+  0% {
+    transform: translateX(0em) translateY(0em) rotate(0deg); }
+  25% {
+    transform: translateX(10em) translateY(0em) rotate(5deg); }
+  50% {
+    transform: translateX(20em) translateY(0em) rotate(10deg); }
+  75% {
+    transform: translateX(10em) translateY(0em) rotate(-5deg); }
+  100% {
+    transform: translateX(0em) translateY(0em) rotate(0deg); } }
+@keyframes fcloud {
+  0% {
+    transform: translateX(0em) translateY(0em) rotate(0deg); }
+  25% {
+    transform: translateX(10em) translateY(0em) rotate(5deg); }
+  50% {
+    transform: translateX(20em) translateY(0em) rotate(10deg); }
+  75% {
+    transform: translateX(10em) translateY(0em) rotate(-5deg); }
+  100% {
+    transform: translateX(0em) translateY(0em) rotate(0deg); } }
 @-webkit-keyframes linkcloud {
   0% {
     transform: rotate(0deg); }

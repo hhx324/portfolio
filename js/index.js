@@ -212,17 +212,17 @@ $('#modal1 .etc a').on('click', function (e) {
 $('#modal2 a').eq(0).on('click', function (e) {
   e.preventDefault(); //a 기본 기능 제한
   $(this).addClass('on').siblings().removeClass('on');
-  $('#modal2 video').eq(0).css('display', 'block').siblings('img').css('display', 'none');
+  $('#modal2 li').eq(0).css('display', 'block').siblings('li').css('display', 'none');
 });
 $('#modal2 a').eq(1).on('click', function (e) {
   e.preventDefault(); //a 기본 기능 제한
   $(this).addClass('on').siblings().removeClass('on');
-  $('#modal2 img').eq(0).css('display', 'block').siblings('img, video').css('display', 'none');
+  $('#modal2 li').eq(1).css('display', 'block').siblings('li').css('display', 'none');
 });
 $('#modal2 a').eq(2).on('click', function (e) {
   e.preventDefault(); //a 기본 기능 제한
   $(this).addClass('on').siblings().removeClass('on');
-  $('#modal2 img').eq(1).css('display', 'block').siblings('img, video').css('display', 'none');
+  $('#modal2 li').eq(2).css('display', 'block').siblings('li').css('display', 'none');
 });
 $('#modal3 a').eq(0).on('click', function (e) {
   e.preventDefault(); //a 기본 기능 제한
