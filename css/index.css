@@ -120,7 +120,7 @@ body {
   height: 100%;
   top: 1vw;
   right: 1vw;
-  width: 4vw;
+  width: 3vw;
   height: 2vw;
   z-index: 3000; }
   .btn_menu, .btn_menu .line {
@@ -1410,7 +1410,7 @@ body {
     color: #fff;
     font-size: 4rem;
     overflow: auto;
-    background: #fcc; }
+    background: transparent; }
     #cnt6 .modal_cnt #tit1 {
       text-align: center;
       height: 4rem; }
@@ -1450,6 +1450,7 @@ body {
           text-decoration: underline; }
         #cnt6 .modal_cnt .etc a p {
           float: left;
+          padding-right: 1em;
           display: none; }
         #cnt6 .modal_cnt .etc a:before {
           content: "";
@@ -1471,11 +1472,19 @@ body {
       width: 100%;
       top: 4rem;
       left: 0; }
+  #cnt6 #modal3 {
+    background: url("../images/cnt2/moon.png"); }
   #cnt6 #modal3 video {
     position: absolute;
     width: 26%;
     top: 4rem;
     left: 34%; }
+  #cnt6 #modal2 img {
+    display: none; }
+  #cnt6 #modal3 li:nth-child(1) {
+    display: block; }
+  #cnt6 #modal3 li {
+    display: none; }
   #cnt6 .modal_cnt .close_btn {
     position: fixed;
     bottom: 0;
@@ -1847,13 +1856,15 @@ body {
     padding-right: 1rem;
     padding-top: 0.5rem; }
     #content #cnt6 .modal_cnt .etc a:hover {
-      text-decoration: underline; } }
+      text-decoration: underline; }
+    #content #cnt6 .modal_cnt .etc a p {
+      padding-right: 0; } }
 @media all and (max-width: 1260px) {
   .btn_menu {
-    top: 2vw;
-    right: 2vw;
-    width: 10vw;
-    height: 2vw;
+    top: 1vw;
+    right: 1vw;
+    width: 4vw;
+    height: 1vw;
     z-index: 3000; }
     .btn_menu, .btn_menu .line {
       position: absolute; }
@@ -1870,9 +1881,9 @@ body {
       .btn_menu .line.top {
         top: 1vw; }
       .btn_menu .line.mid {
-        top: 4vw; }
+        top: 2.5vw; }
       .btn_menu .line.btm {
-        top: 7vw; }
+        top: 4vw; }
     .btn_menu.active .top {
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
@@ -1970,6 +1981,12 @@ body {
     #content #cnt6 .modal_cnt .etc a:hover {
       text-decoration: underline; }
 
+  #content #cnt6 #modal3 video {
+    position: absolute;
+    width: 30%;
+    top: 4rem;
+    left: 35%; }
+
   #content #cnt6 .linkcloud li:nth-of-type(1) {
     left: 10%; }
   #content #cnt6 .linkcloud li:nth-of-type(2) {
@@ -2027,7 +2044,16 @@ body {
     -webkit-animation: wave1 2s linear infinite;
     -moz-animation: wave1 2s linear infinite;
     -o-animation: wave1 2s linear infinite;
-    animation: wave1 2s linear infinite; } }
+    animation: wave1 2s linear infinite; }
+
+  #content #cnt6 #modal2 video {
+    top: 20%; }
+
+  #content #cnt6 #modal3 video {
+    position: absolute;
+    width: 35%;
+    top: 4rem;
+    left: 32.5%; } }
 @media all and (max-width: 1000px) {
   #content #cnt5 .bigstudio {
     display: none; }
@@ -2055,6 +2081,47 @@ body {
     #content #cnt6 .modal_cnt .etc a:hover {
       text-decoration: underline; } }
 @media all and (max-width: 980px) {
+  .btn_menu {
+    top: 1vw;
+    right: 1vw;
+    width: 8vw;
+    height: 1vw;
+    z-index: 3000; }
+    .btn_menu, .btn_menu .line {
+      position: absolute; }
+    .btn_menu .line {
+      -webkit-border-radius: 8px;
+      border-radius: 8px;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      width: 100%;
+      height: 4px;
+      background: #fff;
+      left: 0; }
+      .btn_menu .line.top {
+        top: 1vw; }
+      .btn_menu .line.mid {
+        top: 4vw; }
+      .btn_menu .line.btm {
+        top: 7vw; }
+    .btn_menu.active .top {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: 1vw; }
+    .btn_menu.active .mid {
+      opacity: 0; }
+    .btn_menu.active .btm {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      top: 1vw; }
+
   #content #cnt1 .cnt1_1 .portfolio {
     top: 20%;
     left: 0; }
@@ -2109,7 +2176,11 @@ body {
 
   #content #cnt6 #modal1 .etc a {
     font-size: 1rem;
-    padding-left: 0.3rem; } }
+    padding-left: 0.3rem; }
+
+  #content #cnt6 #modal3 video {
+    width: 45%;
+    left: 27.5%; } }
 @media all and (max-width: 760px) {
   #content #cnt1 .cnt1_1 .portfolio {
     top: 25%;
@@ -2205,6 +2276,14 @@ body {
   #content #cnt6 .cloud .cloud_1, #content #cnt6 .cloud .cloud_2, #content #cnt6 .cloud .cloud_3 {
     width: 60%; }
 
+  #content #cnt6 #modal2 video {
+    top: 30%; }
+
+  #content #cnt6 #modal3 video {
+    width: 50%;
+    left: 25%;
+    top: 20%; }
+
   #content #cnt7 .wave img:nth-of-type(1) {
     bottom: -5rem; }
   #content #cnt7 .wave img:nth-of-type(2) {
@@ -2298,6 +2377,10 @@ body {
   #content #cnt3 #main-ctr h1 {
     font-size: 2rem; }
 
+  #content #cnt6 #modal3 video {
+    width: 56%;
+    left: 22%; }
+
   #content #cnt7 .wave .foot {
     bottom: 0;
     left: 20%;
@@ -2357,6 +2440,10 @@ body {
     right: -10rem;
     bottom: -30rem; }
 
+  #content #cnt6 #modal3 video {
+    width: 80%;
+    left: 10%; }
+
   #content #cnt7 .wave .foot {
     bottom: 0;
     left: 20%;
@@ -2364,7 +2451,7 @@ body {
 
   #content #cnt7 h3 {
     bottom: 15rem;
-    font-size: 4em; } }
+    font-size: 3em; } }
 @media all and (max-width: 360px) {
   #content #cnt2 h2 {
     font-size: 2.5rem;
