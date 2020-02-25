@@ -116,6 +116,8 @@ body {
     background: #fff !important; }
 
 .btn_menu {
+  display: block;
+  height: 100%;
   top: 1vw;
   right: 1vw;
   width: 4vw;
@@ -163,7 +165,7 @@ body {
   left: 100%;
   width: 50%;
   height: 100%;
-  background: #ffcccc url("../images/common/foot.png") no-repeat bottom;
+  background: #ffcccc;
   -webkit-background-size: cover !important;
   background-size: cover !important;
   padding-top: 56px;
@@ -175,8 +177,9 @@ body {
     line-height: 4vw;
     color: #666;
     text-align: center;
-    padding: 2vw; }
-    #gnb ul li a:focus {
+    padding: 2vw;
+    margin-top: 5%; }
+    #gnb ul li a:focus, #gnb ul li a:hover {
       outline: 1px dashed gray; }
 
 /* cnt1 */
@@ -1395,124 +1398,115 @@ body {
     left: 0;
     background: rgba(0, 0, 0, 0.5); }
   #cnt6 .modal_cnt {
+    width: 90%;
+    height: 90%;
     visibility: hidden;
     background: #fff; }
-  #cnt6 #modal1 {
-    width: 80%;
-    height: 80%;
-    color: #666;
+  #cnt6 .modal_cnt {
+    width: 90%;
+    height: 90%;
+    visibility: hidden;
+    background: #fff;
+    color: #fff;
     font-size: 4rem;
-    overflow: auto; }
-    #cnt6 #modal1 #tit1 {
-      text-align: center; }
-    #cnt6 #modal1 img {
+    overflow: auto;
+    background: #fcc; }
+    #cnt6 .modal_cnt #tit1 {
+      text-align: center;
+      height: 4rem; }
+    #cnt6 .modal_cnt img {
       width: 100%;
       top: 20%;
       left: 0;
       display: none; }
-    #cnt6 #modal1 img:nth-of-type(1) {
+    #cnt6 .modal_cnt img:nth-of-type(1) {
       display: block; }
-    #cnt6 #modal1 .etc {
+    #cnt6 .modal_cnt .etc {
       text-align: center; }
-      #cnt6 #modal1 .etc h3 {
+      #cnt6 .modal_cnt .etc h3 {
         float: left;
         padding-left: 1rem;
         font-size: 3rem; }
-      #cnt6 #modal1 .etc a {
+        #cnt6 .modal_cnt .etc h3:before {
+          content: "";
+          float: left;
+          background: url("../images/cnt6/bear-1.png") no-repeat center 50%;
+          width: 4rem;
+          height: 4rem;
+          line-height: 4rem; }
+      #cnt6 .modal_cnt .etc a {
         cursor: pointer;
-        padding-right: 1rem;
+        padding-left: 2.5rem;
         font-size: 2rem;
         font-weight: 600;
         line-height: 4rem;
-        float: right; }
-        #cnt6 #modal1 .etc a:hover {
+        float: right;
+        display: block; }
+        #cnt6 .modal_cnt .etc a.on:before {
+          content: "";
           text-decoration: underline; }
-  #cnt6 #modal2 {
-    width: 80%;
-    height: 80%;
-    color: #666;
-    font-size: 3rem;
-    overflow: auto; }
-    #cnt6 #modal2 #tit1 {
-      text-align: center; }
-    #cnt6 #modal2 img {
-      width: 100%;
-      top: 20%;
-      left: 0;
-      display: none; }
-    #cnt6 #modal2 video {
-      width: 100%;
-      top: 20%;
-      left: 0; }
-    #cnt6 #modal2 .etc {
-      text-align: center; }
-      #cnt6 #modal2 .etc h3 {
-        float: left;
-        padding-left: 1rem;
-        font-size: 3rem; }
-      #cnt6 #modal2 .etc a {
-        cursor: pointer;
-        padding-right: 1rem;
-        font-size: 2rem;
-        font-weight: 600;
-        line-height: 4rem;
-        float: right; }
-        #cnt6 #modal2 .etc a:hover {
+        #cnt6 .modal_cnt .etc a.on p {
+          display: block;
           text-decoration: underline; }
-  #cnt6 #modal3 {
-    width: 80%;
-    height: 80%;
-    color: #666;
-    font-size: 3rem;
-    overflow: auto; }
-    #cnt6 #modal3 #tit1 {
-      text-align: center; }
-    #cnt6 #modal3 img {
-      width: 100%;
-      top: 20%;
-      left: 0;
-      display: none; }
-    #cnt6 #modal3 video {
+        #cnt6 .modal_cnt .etc a p {
+          float: left;
+          display: none; }
+        #cnt6 .modal_cnt .etc a:before {
+          content: "";
+          float: left;
+          background: url("../images/cnt6/foot.png") no-repeat center 40%;
+          width: 2.5rem;
+          height: 2.5rem;
+          line-height: 2.5rem;
+          display: block; }
+        #cnt6 .modal_cnt .etc a:hover, #cnt6 .modal_cnt .etc a:focus {
+          text-decoration: underline;
+          -webkit-transition: width 1s;
+          -o-transition: width 1s;
+          transition: width 1s; }
+          #cnt6 .modal_cnt .etc a:hover p, #cnt6 .modal_cnt .etc a:focus p {
+            display: block; }
+    #cnt6 .modal_cnt video {
       position: absolute;
-      left: 0;
-      top: 15%; }
-    #cnt6 #modal3 .etc {
-      text-align: center; }
-      #cnt6 #modal3 .etc h3 {
-        float: left;
-        padding-left: 1rem;
-        font-size: 3rem; }
-      #cnt6 #modal3 .etc a {
-        cursor: pointer;
-        padding-right: 1rem;
-        font-size: 2rem;
-        font-weight: 600;
-        line-height: 4rem;
-        float: right; }
-        #cnt6 #modal3 .etc a:hover {
-          text-decoration: underline; }
+      width: 100%;
+      top: 4rem;
+      left: 0; }
+  #cnt6 #modal3 video {
+    position: absolute;
+    width: 26%;
+    top: 4rem;
+    left: 34%; }
   #cnt6 .modal_cnt .close_btn {
     position: fixed;
-    top: 5%;
-    left: 5%;
-    width: 4em;
-    height: 4em;
+    bottom: 0;
+    left: 0;
+    width: 5vw;
+    height: 10vw;
+    line-height: 10vw;
     color: #fff; }
+    #cnt6 .modal_cnt .close_btn span {
+      position: absolute;
+      left: 6vw;
+      bottom: 0;
+      font-size: 2vw;
+      height: 2vw;
+      line-height: 2vw;
+      text-align: center; }
     #cnt6 .modal_cnt .close_btn .line {
       position: absolute;
       left: 0;
       width: 100%;
       height: 4px;
-      background: #666; }
+      background: #fff; }
     #cnt6 .modal_cnt .close_btn .top {
-      top: 0;
+      top: 70%;
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
       -o-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       transform: rotate(45deg); }
     #cnt6 .modal_cnt .close_btn .btm {
-      top: 0;
+      top: 70%;
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
       -o-transform: rotate(-45deg);
@@ -1712,9 +1706,6 @@ body {
       position: absolute;
       top: 40%;
       left: 20%; }
-  #cnt7 .sandal img {
-    top: 0;
-    left: 20%; }
 
 @-webkit-keyframes wave1 {
   0% {
@@ -1763,7 +1754,7 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 3rem;
-    padding-right: 1rem; }
+    padding-left: 1rem; }
     .etc a:hover {
       text-decoration: underline; } }
 @media all and (max-width: 1580px) {
@@ -1974,7 +1965,7 @@ body {
     font-size: 1.3rem;
     font-weight: 500;
     line-height: 2.5rem;
-    padding-right: 1rem;
+    padding-left: 1rem;
     padding-top: 0.5rem; }
     #content #cnt6 .modal_cnt .etc a:hover {
       text-decoration: underline; }
@@ -2059,7 +2050,7 @@ body {
     font-size: 1.2rem;
     font-weight: 500;
     line-height: 2.5rem;
-    padding-right: 1rem;
+    padding-left: 1rem;
     padding-top: 0.5rem; }
     #content #cnt6 .modal_cnt .etc a:hover {
       text-decoration: underline; } }
@@ -2086,7 +2077,8 @@ body {
     -o-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    float: none; }
+    float: none;
+    margin-left: 10%; }
 
   #content #cnt3 #main-ctr h1 {
     font-size: 3rem; }
@@ -2117,7 +2109,7 @@ body {
 
   #content #cnt6 #modal1 .etc a {
     font-size: 1rem;
-    padding-right: 0.3rem; } }
+    padding-left: 0.3rem; } }
 @media all and (max-width: 760px) {
   #content #cnt1 .cnt1_1 .portfolio {
     top: 25%;
@@ -2223,8 +2215,18 @@ body {
 
   #content #cnt6 .linkcloud li {
     width: 60%;
-    height: 10%; } }
+    height: 10%; }
+
+  #content #cnt7 .wave .foot {
+    bottom: 0;
+    left: 20%;
+    margin-top: 15%; } }
 @media all and (max-width: 640px) {
+  #area #content .order {
+    right: 0; }
+    #area #content .order img {
+      width: 80%; }
+
   #content #cnt1 .cnt1_1 {
     top: 0; }
 
@@ -2266,7 +2268,8 @@ body {
     height: 40%;
     background: url("../images/cnt5/스튜디오(작).png") center 40%; }
     #content #cnt5 .smallstudio .ss-title img {
-      vertical-align: bottom; }
+      vertical-align: bottom;
+      margin-top: 3%; }
     #content #cnt5 .smallstudio .ss-title h3 {
       font-size: 3rem;
       height: 3rem;
@@ -2295,10 +2298,21 @@ body {
   #content #cnt3 #main-ctr h1 {
     font-size: 2rem; }
 
+  #content #cnt7 .wave .foot {
+    bottom: 0;
+    left: 20%;
+    margin-top: 30%; }
+
   #content #cnt7 h3 {
     bottom: 10rem;
     font-size: 4rem; } }
 @media all and (max-width: 480px) {
+  .area #content .order {
+    margin-left: 0;
+    left: 0; }
+    .area #content .order img {
+      width: 70%; }
+
   #content #cnt1 .cnt1_1 .portfolio {
     top: 30%;
     left: 0; }
@@ -2343,13 +2357,14 @@ body {
     right: -10rem;
     bottom: -30rem; }
 
-  #content #cnt7 h3 {
-    font-size: 3rem; }
+  #content #cnt7 .wave .foot {
+    bottom: 0;
+    left: 20%;
+    margin-top: 40%; }
 
-  #content #cnt7 .wave img:nth-of-type(1) {
-    bottom: -4rem; }
-  #content #cnt7 .wave img:nth-of-type(2) {
-    bottom: -4rem; } }
+  #content #cnt7 h3 {
+    bottom: 15rem;
+    font-size: 4em; } }
 @media all and (max-width: 360px) {
   #content #cnt2 h2 {
     font-size: 2.5rem;
@@ -2359,8 +2374,17 @@ body {
     text-indent: 50px; }
 
   #content #cnt4 #cnt4-1 li:nth-of-type(2) {
-    bottom: 25%;
-    left: 20%; } }
+    bottom: 30%;
+    left: 18%; }
+
+  #content #cnt7 .wave .foot {
+    bottom: 0;
+    left: 20%;
+    margin-top: 80%; }
+
+  #content #cnt7 h3 {
+    bottom: 15rem;
+    font-size: 2.5em; } }
 /* @media screen and (orientation: portrait) {
     //모바일 기기의 회전 속성 : portrait(세로 길게)
 }

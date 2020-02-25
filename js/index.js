@@ -22,20 +22,20 @@ for(i=0;i<bylineArr.length;i++){									// Loop for every letter
 
 /* header */
   var $gnb = $('#gnb');
-
+  
   //메뉴열기 클릭
-  $('.btn_menu').on('click', function () {
+  $('.btn_menu').on('click focus', function () {
     if ($(this).hasClass('active')) { //닫기
       $gnb.stop().animate({left: '50%'}, 300, function () {
-        $(this).css({visibility: 'hidden'}).find('ul li.on').removeClass('on').children('ul').stop().slideUp();
+        $(this).css({visibility: 'hidden'}).find('ul li.on').removeClass('on');
       });
 
-      $(this).removeClass('active').find('blind').text('메뉴 열기');
+      $(this).removeClass('active');
     } else {    //열기
       var scrollMove = scrollT;  //click시 스크롤을 저장
       console.log(scrollMove);
 
-      $(this).addClass('active').find('blind').text('메뉴 닫기');
+      $(this).addClass('active');
 
       //가정처음과 마지막에서 #gnb 외부로 포커스가 나가지 않도록 제어
       var $first = $gnb.find('[data-link="first"]');
@@ -76,7 +76,9 @@ for(i=0;i<bylineArr.length;i++){									// Loop for every letter
       return false;
     });
   });
-
+  $('#content').on('click',function(){
+      $gnb.css({visibility: 'hidden'}).find('ul li.on').removeClass('on');
+  });
 
   /* cnt3 */
   var mainCtr = $("#main-ctr"),
@@ -193,42 +195,49 @@ $('.bigstudio .bs-big button').on('click', function(){
 $('.ss-button li button').on('click', function(){
   var index = $(this).parent().index();
   console.log(index);
-  $('.bs-small li').eq(index).addClass('f').siblings().removeClass('f');
+  $('.bs-small li').eq(index).slideDown().siblings().slideUp();
   $('.smallstudio .ss-title li').eq(index).slideDown().siblings().slideUp();
   $('.explain li').eq(index).slideDown().siblings().slideUp();
 });
 
 
 /* cnt6 */
-$('#modal1 a').on('click', function (e) {
+$('#modal1 .etc a').on('click', function (e) {
   e.preventDefault(); //a 기본 기능 제한
   var tgNum = $(this).index()-1;
   console.log(tgNum);
-  $('#modal1 img').eq(tgNum).css('display', 'block').siblings('img').css('display', 'none');
+  $('#modal1 .clearfix li').eq(tgNum).css('display', 'block').siblings().css('display', 'none');
+  $(this).addClass('on').siblings().removeClass('on');
 });
 $('#modal2 a').eq(0).on('click', function (e) {
   e.preventDefault(); //a 기본 기능 제한
+  $(this).addClass('on').siblings().removeClass('on');
   $('#modal2 video').eq(0).css('display', 'block').siblings('img').css('display', 'none');
 });
 $('#modal2 a').eq(1).on('click', function (e) {
   e.preventDefault(); //a 기본 기능 제한
+  $(this).addClass('on').siblings().removeClass('on');
   $('#modal2 img').eq(0).css('display', 'block').siblings('img, video').css('display', 'none');
 });
 $('#modal2 a').eq(2).on('click', function (e) {
   e.preventDefault(); //a 기본 기능 제한
+  $(this).addClass('on').siblings().removeClass('on');
   $('#modal2 img').eq(1).css('display', 'block').siblings('img, video').css('display', 'none');
 });
 $('#modal3 a').eq(0).on('click', function (e) {
   e.preventDefault(); //a 기본 기능 제한
-  $('#modal3 video').eq(0).css('display', 'block').siblings('img').css('display', 'none');
+  $(this).addClass('on').siblings().removeClass('on');
+  $('#modal3 li').eq(0).css('display', 'block').siblings().css('display', 'none');
 });
 $('#modal3 a').eq(1).on('click', function (e) {
   e.preventDefault(); //a 기본 기능 제한
-  $('#modal3 img').eq(0).css('display', 'block').siblings('img, video').css('display', 'none');
+  $(this).addClass('on').siblings().removeClass('on');
+  $('#modal3 li').eq(1).css('display', 'block').siblings().css('display', 'none');
 });
 $('#modal3 a').eq(2).on('click', function (e) {
   e.preventDefault(); //a 기본 기능 제한
-  $('#modal3 img').eq(1).css('display', 'block').siblings('img, video').css('display', 'none');
+  $(this).addClass('on').siblings().removeClass('on');
+  $('#modal3 li').eq(2).css('display', 'block').siblings().css('display', 'none');
 });
 
 });
@@ -246,7 +255,7 @@ $(document).ready(function() {
   마지막 링크에서 shift(X)+tab을 누르면 가장 처음으로 포커스 강제이동 */
   $('.open_btn').on('click', function () {
       var $openBtn = $(this);   //모달 닫기를 클릭시 열어준 버튼에 포커스 강제 이동
-      var $mdCnt = $( $(this).data('href') ); //$()로 감싸서 선택자로 변경
+      var $mdCnt = $($(this).data('href')); //$()로 감싸서 선택자로 변경
       var $closeBtn = $mdCnt.find('.close_btn'); //열려진 모달 내부의 닫기버튼
       var $first = $mdCnt.find('[data-link="first"]'); //열려진 모달 내부의 첫번째 포커스가 갈 대상
       var $last = $mdCnt.find('[data-link="last"]'); //열려진 모달 내부의 마지막 포커스가 갈 대상

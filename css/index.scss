@@ -59,7 +59,7 @@ body{width: 100%;margin: 0 auto;font-family: smile;font-weight: 400;font-size: 1
     position: fixed;top: 0;left: 0;right: 0;height: 56px;border-bottom: 1px solid transparent;z-index: 2000;
     .btn_menu.active .line{background: #fff !important;}
 }
-.btn_menu{
+.btn_menu{display: block;height: 100%;
     &, .line{position: absolute;}
     top: 1vw;right: 1vw;width: 4vw;height: 2vw;z-index: 3000;
     .line{
@@ -83,10 +83,13 @@ body{width: 100%;margin: 0 auto;font-family: smile;font-weight: 400;font-size: 1
     }
 }
 #gnb{
-    visibility: hidden;position: fixed;top: 0;left: 100%;width: 50%;height: 100%;background: #ffcccc url("../images/common/foot.png") no-repeat bottom;@include bgcover(cover);padding-top: 56px;overflow-y: auto;
-    ul li a{
-        display: block;font-size: 4vw;height: 4vw;line-height: 4vw;color: #666;text-align: center;padding: 2vw;
-        &:focus{outline: 1px dashed gray;}
+    visibility: hidden;position: fixed;top: 0;left: 100%;width: 50%;height: 100%;background: #ffcccc;@include bgcover(cover);padding-top: 56px;overflow-y: auto;
+    ul li {
+        a{
+            display: block;font-size: 4vw;height: 4vw;line-height: 4vw;color: #666;text-align: center;padding: 2vw;margin-top: 5%;
+            &:focus,&:hover{outline: 1px dashed gray;}
+            
+        }
     }
 }
 
@@ -442,47 +445,36 @@ span {display: inline-block;@include animation(spin-letters 4s linear);}}
     } 
     #dim, .modal_cnt{position: fixed;z-index: 1000;width: 90vw;height:1000px;}
     #dim{display: none;width: 100%;height:100%;top: 0;left: 0;background: rgba(0,0,0, .5);}
-    .modal_cnt{visibility: hidden;background: #fff;}/* ios의 voiceover에서 접근할수 있도록 display 대신 visibility */
-    #modal1{width: 80%;height: 80%;color: #666;font-size: 4rem;overflow:auto;
-        #tit1{text-align: center;}
+    .modal_cnt{width: 90%;height: 90%;visibility: hidden;background: #fff;}/* ios의 voiceover에서 접근할수 있도록 display 대신 visibility */
+    .modal_cnt{width: 90%;height: 90%;visibility: hidden;background: #fff;color: #fff;font-size: 4rem;overflow:auto;background: #fcc;
+        #tit1{text-align: center;height: 4rem;}
     img{width: 100%;top: 20%;left: 0;display: none;}
     img:nth-of-type(1){display: block;}
         .etc{text-align: center;
-            h3{float: left;padding-left: 1rem;font-size: 3rem;}
-            a{cursor: pointer;padding-right: 1rem;font-size: 2rem;font-weight: 600;line-height: 4rem;float: right;
-            &:hover{text-decoration: underline;}
+            h3{float: left;padding-left: 1rem;font-size: 3rem;
+                &:before{content: "";float: left;background:url("../images/cnt6/bear-1.png") no-repeat center 50%;width: 4rem;height: 4rem;line-height: 4rem;}
+            }
+            a{cursor: pointer;padding-left:2.5rem;font-size: 2rem;font-weight: 600;line-height: 4rem;float: right;display: block;
+            &.on{
+                &:before{content: "";text-decoration: underline;}
+                p{display: block;text-decoration: underline;}
+            }
+            p{float: left;display: none;}
+            &:before{content: "";float: left;background:url("../images/cnt6/foot.png") no-repeat center 40%;width: 2.5rem;height: 2.5rem;line-height: 2.5rem;display: block;}
+
+            &:hover,&:focus{text-decoration: underline;@include transition(width 1s);
+            p{display: block;}
+            }
             }
         } 
-        
-    }
-    #modal2{width: 80%;height: 80%;color: #666;font-size: 3rem;overflow:auto;
-        #tit1{text-align: center;}
-    img{width: 100%;top: 20%;left: 0;display: none;}
-    video{width: 100%;top: 20%;left: 0;}
-        .etc{text-align: center;
-            h3{float: left;padding-left: 1rem;font-size: 3rem;}
-            a{cursor: pointer;padding-right: 1rem;font-size: 2rem;font-weight: 600;line-height: 4rem;float: right;
-            &:hover{text-decoration: underline;}
-            }
-        } 
-        
-    }
-    #modal3{width: 80%;height: 80%;color: #666;font-size: 3rem;overflow:auto;
-        #tit1{text-align: center;}
-    img{width: 100%;top: 20%;left: 0;display: none;}
-    video{position: absolute;left: 0;top: 15%;}
-        .etc{text-align: center;
-            h3{float: left;padding-left: 1rem;font-size: 3rem;}
-            a{cursor: pointer;padding-right: 1rem;font-size: 2rem;font-weight: 600;line-height: 4rem;float: right;
-            &:hover{text-decoration: underline;}
-            }
-        } 
-        
-    }
-    .modal_cnt .close_btn{position: fixed;top: 5%;left: 5%;width: 4em;height: 4em;color: #fff;
-        .line{position: absolute;left: 0;width: 100%;height: 4px;background: #666;}
-        .top{top: 0;@include transform(rotate(45deg));}
-        .btm{top: 0;;@include transform(rotate(-45deg));}
+        video{position: absolute;width: 100%;top: 4rem;left: 0;}
+    }     
+    #modal3 video{position: absolute;width: 26%;top: 4rem;left: 34%;}
+    .modal_cnt .close_btn{position: fixed;bottom: 0;left: 0;width: 5vw;height: 10vw;line-height: 10vw;color:#fff;
+        span{position: absolute;left: 6vw;bottom: 0;font-size: 2vw;height: 2vw;line-height: 2vw;text-align: center;}
+        .line{position: absolute;left: 0;width: 100%;height: 4px;background: #fff;}
+        .top{top: 70%;@include transform(rotate(45deg));}
+        .btm{top: 70%;@include transform(rotate(-45deg));}
     }
 }
 
@@ -527,9 +519,6 @@ span {display: inline-block;@include animation(spin-letters 4s linear);}}
         img:nth-of-type(2){position: absolute;bottom: -10rem;z-index: 2;@include animation(wave1 2s linear infinite);}
         img:nth-of-type(3){position: absolute;top: 40%;left: 20%;}
     }
-    .sandal{
-        img{top: 0;left: 20%;}
-    }
 }
 @include keyframes(wave1) {
     0%{transform:translateY(0em)}
@@ -550,7 +539,7 @@ span {display: inline-block;@include animation(spin-letters 4s linear);}}
     #cnt5 .smallstudio{left: 0;}
     .etc{
         h3{font-size: 3rem;}
-        a{font-size: 1.5rem;font-weight: 600;line-height: 3rem;padding-right: 1rem;
+        a{font-size: 1.5rem;font-weight: 600;line-height: 3rem;padding-left: 1rem;
         &:hover{text-decoration: underline;}
         }
     }   
@@ -657,7 +646,7 @@ span {display: inline-block;@include animation(spin-letters 4s linear);}}
     /* #content #cnt4 #cnt4-1{bottom: 10%} */
     #content #cnt6 .modal_cnt .etc{
         h3{font-size: 2.5rem;}
-        a{font-size: 1.3rem;font-weight: 500;line-height: 2.5rem ;padding-right: 1rem;padding-top: 0.5rem;
+        a{font-size: 1.3rem;font-weight: 500;line-height: 2.5rem ;padding-left: 1rem;padding-top: 0.5rem;
         &:hover{text-decoration: underline;}
         }
     }
@@ -704,7 +693,7 @@ span {display: inline-block;@include animation(spin-letters 4s linear);}}
     }
     #content #cnt6 .modal_cnt .etc{
         h3{font-size: 2.5rem;}
-        a{font-size: 1.2rem;font-weight: 500;line-height: 2.5rem ;padding-right: 1rem;padding-top: 0.5rem;
+        a{font-size: 1.2rem;font-weight: 500;line-height: 2.5rem ;padding-left: 1rem;padding-top: 0.5rem;
         &:hover{text-decoration: underline;}
         }
     }
@@ -715,7 +704,7 @@ span {display: inline-block;@include animation(spin-letters 4s linear);}}
     #content #cnt1 .cnt1_1 .portfolio{top: 20%;left: 0;}
     .foryou {top: 40%;left: 0;}
     .byline {font-size: 5vw;top: 33%;left: 12%;text-align: center;}
-    #content > #cnt4 > h3, #content > #cnt5 > h3, #content > #cnt6 > h3{position: absolute;left: 20%; @include transform(rotate(270deg));float: none;}
+    #content > #cnt4 > h3, #content > #cnt5 > h3, #content > #cnt6 > h3{position: absolute;left: 20%; @include transform(rotate(270deg));float: none;margin-left: 10%;}
     #content #cnt3 #main-ctr{
         h1{font-size: 3rem;}
     }
@@ -729,7 +718,7 @@ span {display: inline-block;@include animation(spin-letters 4s linear);}}
         }
     }
     #content #cnt6 #modal1 .etc{
-        a{font-size: 1rem;padding-right:0.3rem;}
+        a{font-size: 1rem;padding-left:0.3rem;}
     }
 }
 
@@ -782,16 +771,28 @@ span {display: inline-block;@include animation(spin-letters 4s linear);}}
         li:nth-of-type(4){left: 30%;}
     }
     #content #cnt6 .cloud .cloud_1, #content #cnt6 .cloud .cloud_2, #content #cnt6 .cloud .cloud_3{width: 60%;}
+
     #content #cnt7 .wave{
         img:nth-of-type(1){bottom: -5rem;}
         img:nth-of-type(2){bottom: -5rem;}
         img:nth-of-type(3){width: 70%;top: 40%;}
     }
     #content #cnt6 .linkcloud li{width: 60%;height: 10%}
+
+    #content #cnt7{
+        .wave{
+            .foot{bottom: 0;left: 20%;margin-top: 15%;}
+        }
+    }
 }
 
 //6) 640이하
 @media all and (max-width: 640px) {
+
+    #area #content .order{right: 0;
+        img{width: 80%;}
+    } 
+
     #content #cnt1 .cnt1_1{top: 0;}
     #content #cnt1 .cnt1_1 .portfolio{top: 25%;left: 0;}
     .foryou {top: 40%;left: 0;}
@@ -806,7 +807,7 @@ span {display: inline-block;@include animation(spin-letters 4s linear);}}
         background: url("../images/cnt5/스튜디오\(작\).png") center
         40%;
         .ss-title{
-            img{vertical-align: bottom;}
+            img{vertical-align: bottom;margin-top: 3%;}
             h3{font-size: 3rem;height: 3rem;line-height: 3.5rem;}
             p{font-size: 2.5rem;height: 2.5rem;line-height: 3rem;}
         }
@@ -822,11 +823,19 @@ span {display: inline-block;@include animation(spin-letters 4s linear);}}
         }
     }
     #content #cnt3 #main-ctr h1{font-size: 2rem;}
+    #content #cnt7{
+        .wave{
+            .foot{bottom: 0;left: 20%;margin-top: 30%;}
+        }
+    }
     #content #cnt7 h3{bottom: 10rem;font-size: 4rem;}
 }
 
 //7) 480이하
 @media all and (max-width: 480px) {
+    .area #content .order{margin-left: 0;left: 0;
+        img{width: 70%;}
+    } 
     #content #cnt1 .cnt1_1 .portfolio{top: 30%;left: 0;}
     .foryou {top: 40%;left: 0;}
     .byline {font-size: 5vw;top: 36%;left: 12%;text-align: center;}
@@ -845,18 +854,25 @@ span {display: inline-block;@include animation(spin-letters 4s linear);}}
         }
     }
     #content #cnt2 .moon1{width: 150%;right: -10rem;bottom: -30rem;}
-    #content #cnt7 h3{font-size: 3rem;}
-    #content #cnt7 .wave{
-        img:nth-of-type(1){bottom: -4rem;}
-        img:nth-of-type(2){bottom: -4rem;}
+    #content #cnt7{
+        .wave{
+            .foot{bottom: 0;left: 20%;margin-top: 40%;}
+        }
     }
+    #content #cnt7 h3{bottom: 15rem;font-size: 4em;}
 }
 
 //7) 480이하
 @media all and (max-width: 360px) {
     #content #cnt2 h2{font-size: 2.5rem;line-height: 3rem;}
     #content #cnt4 #cnt4-1{text-indent: 50px;}
-    #content #cnt4 #cnt4-1 li:nth-of-type(2){bottom: 25%;left: 20%;}
+    #content #cnt4 #cnt4-1 li:nth-of-type(2){bottom: 30%;left: 18%;}
+    #content #cnt7{
+        .wave{
+            .foot{bottom: 0;left: 20%;margin-top: 80%;}
+        }
+    }
+    #content #cnt7 h3{bottom: 15rem;font-size: 2.5em;}
 }
 
 /* @media screen and (orientation: portrait) {

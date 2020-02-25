@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* tag reset */
+*{margin: 0;padding: 0;}
+h2, h3{font-size: 100%;}
+button{border: none;background: none;cursor: pointer;}
+section{display: block;}
+
+/* common class */
+.sr-only{position: absolute;top: 0;left: -9999px;}
+
+body{font-family: "맑은 고딕", "Malgun Gothic";font-size: 14px;color: #333;}
+
+#content{width: 1200px;margin: 50px auto;}
+#content h2{font-size: 23px;margin-bottom: 50px;}
+.accordion{border-bottom: 1px solid #aaa;}
+.accordion .tit button{position: relative;padding: 23px 160px 23px 35px;line-height: 24px;width: 100%;background: url("../images/bu_faq_q.png") no-repeat left center;font-size: 16px;text-align: left;}/* 버튼 태그는 border와 padding을 포함한 크기를 width */
+.accordion .tit button .icon{position: absolute;right: 30px;top: 50%;width: 16px;height: 9px;margin-top: -4.5px;background: url("../images/ico.png") no-repeat 0 0;}
+.accordion .tit.on button .icon{background-position: -16px 0;}
+.accordion .accopanel{display: none;padding: 35px;background: #eee;}
+.accordion .accopanel + .tit{border-top: 1px solid #aaa;}

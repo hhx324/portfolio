@@ -35,16 +35,16 @@
                 <h2 class="sr-only">주메뉴</h2>
                 <ul class="clearfix">
                     <li class="on">
-                        <a href="" data-link="first">HOME</a>
+                        <a href="#cnt1" data-link="first">HOME</a>
                     </li>
                     <li>
-                        <a href="">SKILL</a>
+                        <a href="#cnt4">SKILL</a>
                     </li>
                     <li>
-                        <a href="">ABOUT</a>
+                        <a href="#cnt5">ABOUT</a>
                     </li>
                     <li>
-                        <a href="">PROJECT</a>
+                        <a href="#cnt6">PROJECT</a>
                     </li>
                 </ul>
             </nav>
@@ -67,11 +67,11 @@
                     <img src="images/cnt2/moon.png" alt="달" class="p_a moon">
                     <img src="images/cnt2/moonshadow.png" alt="달그림자" class="p_a moonshadow1">
                     <img src="images/cnt2/moonshadow.png" alt="달그림자" class="p_a moonshadow2">
-                    <img src="images/cnt2/moonshadow.png" alt="" class="p_a moonshadow3">
+                    <img src="images/cnt2/moonshadow.png" alt="달그림자" class="p_a moonshadow3">
                 </div>
-                <img src="images/cnt2/cloud.png" alt="" class="p_a cloud">
-                <img src="images/cnt2/star1.png" alt="" class="p_a star1">
-                <img src="images/cnt2/star1.png" alt="" class="p_a star2">
+                <img src="images/cnt2/cloud.png" alt="구름" class="p_a cloud">
+                <img src="images/cnt2/star1.png" alt="별똥별" class="p_a star1">
+                <img src="images/cnt2/star1.png" alt="별똥별" class="p_a star2">
             </article>
             <article id="cnt3">
                 <div id="main-ctr">
@@ -100,7 +100,7 @@
                 </div>
             </article>
             <article id="cnt4">
-                <h3><img src="images/common/skill.png" alt="skill"></h3>
+                <h3 class="order"><img src="images/common/skill.png" alt="skill"></h3>
                 <ul id="cnt4-1" class="clearfix">
                     <li><img src="images/cnt4/ballon.png" alt="열기구"></li>
                     <li><img src="images/cnt4/fire.png" alt="불기둥"></li>
@@ -186,10 +186,10 @@
                         </ul>
                     </div>
                 </div>
-                <img src="images/cnt6/낙하산.png" alt="" class="para">
+                <img src="images/cnt6/낙하산.png" alt="낙하산" class="para">
             </article>
             <article id="cnt5">
-                <h3 class="f_r"><img src="images/common/about.png" alt=""></h3>
+                <h3 class="f_r order"><img src="images/common/about.png" alt="02 about"></h3>
                 <div class="bigstudio p_a">
                     <ul class="bs-big clearfix">
                         <li>
@@ -309,7 +309,7 @@
                 </div>
             </article>
             <article id="cnt6">
-                <h3 class="f_r"><img src="images/common/project.png" alt=""></h3>
+                <h3 class="f_r order"><img src="images/common/project.png" alt="03 project"></h3>
                 <ul class="cloud">
                     <li class="cloud_1 p_r">
                         <img src="images/cnt6/pinkcloud.png" alt="">
@@ -355,30 +355,42 @@
                 <div id="modal1" class="modal_cnt" role="dialog" aria-modal="true" aria-labelledby="tit1">
                     <div class="etc">
                         <h3 id="tit1">DESIGN</h3>
-                        <a role="button">LOT RANKING</a>
-                        <a role="button">이스라엘 대사관</a>
-                        <a role="button">BEAUTY SECRET</a>
-                        <a role="button">FURNIDAUM</a>
-                        <button class="close_btn" type="button" data-link="last">
-                            <span class="line top"></span>
-                            <span class="line btm"></span>
+                        <a role="button" class="on"><p>LOT RANKING</p></a>
+                        <a role="button"><p>이스라엘 대사관</p></a>
+                        <a role="button"><p>BEAUTY SECRET</p></a>
+                        <a role="button"><p>FURNIDAUM</p></a>
+                        <button class="close_btn p_r" type="button" data-link="last">
+                            <span>CLOSE</span>
+                            <p class="line top"></p>
+                            <p class="line btm"></p>
                         </button>
                     </div>
-                    <img src="images/cnt6/페이지.jpg" alt="">
-                    <img src="images/cnt6/대사관-리뉴얼.jpg" alt="">
-                    <img src="images/cnt6/립스틱.jpg" alt="">
-                    <img src="images/cnt6/원목.jpg" alt="">
+                    <ul class="clearfix">
+                        <li>
+                            <img src="images/cnt6/페이지.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/cnt6/대사관-리뉴얼.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/cnt6/립스틱.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/cnt6/원목.jpg" alt="">
+                        </li>
+                    </ul>
                 </div>
                 <div id="modal2" class="modal_cnt" role="dialog" aria-modal="true" aria-labelledby="tit1">
                     <div class="etc">
                         <h3 id="tit1">HEUMARA</h3>
-                        <a role="button">PLAY</a>
-                        <a role="button">PLAN</a>
-                        <a role="button">CONSEQUENCE</a>
-                        <a role="button" href="https://hhx324.github.io/heumara-new/.">LINK</a>
+                        <a role="button" class="on"><p>PLAY</p></a>
+                        <a role="button"><p>PLAN</p></a>
+                        <a role="button"><p>CONSEQUENCE</p></a>
+                        <a role="button" href="https://hhx324.github.io/heumara-new/."><p>LINK</p></a>
                         <button class="close_btn" type="button" data-link="last">
-                            <span class="line top"></span>
-                            <span class="line btm"></span>
+                            <span>CLOSE</span>
+                            <p class="line top"></p>
+                            <p class="line btm"></p>
                         </button>
                     </div>
                     <video class="heumara" src="media/heumara.mp4" autoplay loop muted
@@ -389,31 +401,35 @@
                 <div id="modal3" class="modal_cnt" role="dialog" aria-modal="true" aria-labelledby="tit1">
                     <div class="etc">
                         <h3 id="tit1">NANUM</h3>
-                        <a role="button">PLAY</a>
-                        <a role="button">PLAN</a>
-                        <a role="button">CONSEQUENCE</a>
-                        <a role="button" href="https://hhx324.github.io/nanump/.">LINK</a>
+                        <a role="button" class="on"><p>PLAY</p></a>
+                        <a role="button"><p>PLAN</p></a>
+                        <a role="button"><p>CONSEQUENCE</p></a>
+                        <a role="button" href="https://hhx324.github.io/nanump/."><p>LINK</p></a>
                         <button class="close_btn" type="button" data-link="last">
-                            <span class="line top"></span>
-                            <span class="line btm"></span>
+                            <span>CLOSE</span>
+                            <p class="line top"></p>
+                            <p class="line btm"></p>
                         </button>
                     </div>
-                    <video class="nanum" src="media/nanum.mp4" autoplay loop muted poster="images/cnt6/구름이.png"></video>
-                    <img class="nanum" src="images/cnt6/nanum1.png" alt="">
-                    <img class="nanum" src="images/cnt6/nanum2.png" alt="">
+                    <ul class="clearfix">
+                        <li class="on">
+                            <video class="nanum" src="media/nanum.mp4" autoplay loop muted poster="images/cnt6/구름이.png"></video>
+                        </li>
+                        <li>
+                            <img class="nanum" src="images/cnt6/nanum1.png" alt="plan">
+                        </li>
+                        <li>
+                            <img class="nanum" src="images/cnt6/nanum2.png" alt="CONSEQUENCE">
+                        </li>
+                    </ul>
                 </div>
             </article>
             <article id="cnt7">
                 <h3>감사합니다.</h3>
-                <div class="foots">
-                    <ul>
-                        <li><img src="" alt=""></li>
-                    </ul>
-                </div>
                 <div class="wave p_r">
-                    <img src="images/cnt7/wave1.png" alt="">
-                    <img src="images/cnt7/wave2.png" alt="">
-                    <img src="images/cnt7/sandal.png" alt="">
+                    <img src="images/cnt7/wave1.png" alt="파도">
+                    <img src="images/cnt7/wave2.png" alt="파도">
+                    <img src="images/cnt7/sandal.png" alt="슬리퍼" class="foot">
                 </div>
             </article>
         </section>
