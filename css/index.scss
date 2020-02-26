@@ -61,7 +61,7 @@ body{width: 100%;margin: 0 auto;font-family: smile;font-weight: 400;font-size: 1
 }
 .btn_menu{display: block;height: 100%;
     &, .line{position: absolute;}
-    top: 1vw;right: 1vw;width: 3vw;height: 2vw;z-index: 3000;
+    top: 1vw;right: 1vw;width: 3vw;height: 3vw;z-index: 3000;
     .line{
         @include radius(8px);
         @include transition(all 0.5s);
@@ -894,7 +894,7 @@ span {display: inline-block;@include animation(spin-letters 4s linear);}}
     #content #cnt5 .smallstudio{
         .ss-title{
             li{position: absolute;height: 30%;bottom: -20rem;}
-            img{vertical-align: bottom;}
+            img{vertical-align: bottom;margin-top: 7%;}
             h3{font-size: 2rem;height: 2rem;line-height: 2.5rem;}
             p{font-size: 1.7rem;height: 1.7rem;line-height: 2rem;}
         }

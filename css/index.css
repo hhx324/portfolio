@@ -121,7 +121,7 @@ body {
   top: 1vw;
   right: 1vw;
   width: 3vw;
-  height: 2vw;
+  height: 3vw;
   z-index: 3000; }
   .btn_menu, .btn_menu .line {
     position: absolute; }
@@ -2489,7 +2489,8 @@ body {
     height: 30%;
     bottom: -20rem; }
   #content #cnt5 .smallstudio .ss-title img {
-    vertical-align: bottom; }
+    vertical-align: bottom;
+    margin-top: 7%; }
   #content #cnt5 .smallstudio .ss-title h3 {
     font-size: 2rem;
     height: 2rem;
