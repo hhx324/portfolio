@@ -374,7 +374,7 @@ body {
     bottom: 12%;
     right: -10%;
     z-index: 1; }
-  #cnt2 h2 {
+  #cnt2 h2, #cnt2 h2:focus {
     bottom: 15%;
     left: 3%;
     color: #ffff99;
@@ -1554,6 +1554,28 @@ body {
       -o-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
       transform: rotate(-45deg); }
+  #cnt6 #modal4 {
+    color: #fff; }
+    #cnt6 #modal4 .swiper-container {
+      display: none;
+      width: 100%;
+      height: 100%; }
+      #cnt6 #modal4 .swiper-container.on {
+        display: block; }
+    #cnt6 #modal4 .swiper-slide {
+      float: left;
+      text-align: center;
+      font-size: 1.5vw;
+      background: transparent; }
+      #cnt6 #modal4 .swiper-slide p {
+        font-size: 2vw;
+        padding: 1vw; }
+      #cnt6 #modal4 .swiper-slide span {
+        height: 2vw;
+        line-height: 2vw; }
+      #cnt6 #modal4 .swiper-slide img {
+        max-width: 100%;
+        padding-top: 1vw; }
 
 @-webkit-keyframes cup {
   0% {
@@ -2145,7 +2167,30 @@ body {
     padding-left: 1rem;
     padding-top: 0.5rem; }
     #content #cnt6 .modal_cnt .etc a:hover {
-      text-decoration: underline; } }
+      text-decoration: underline; }
+
+  #content #cnt6 #modal4 {
+    color: #fff; }
+    #content #cnt6 #modal4 .swiper-container {
+      display: none;
+      width: 100%;
+      height: 100%; }
+      #content #cnt6 #modal4 .swiper-container.on {
+        display: block; }
+    #content #cnt6 #modal4 .swiper-slide {
+      float: left;
+      text-align: center;
+      font-size: 2vw;
+      background: transparent; }
+      #content #cnt6 #modal4 .swiper-slide p {
+        font-size: 3vw;
+        padding: 1vw; }
+      #content #cnt6 #modal4 .swiper-slide span {
+        height: 3vw;
+        line-height: 3vw; }
+      #content #cnt6 #modal4 .swiper-slide img {
+        max-width: 200%;
+        padding: 10vw 0; } }
 @media all and (max-width: 980px) {
   .btn_menu {
     top: 1vw;
@@ -2447,6 +2492,24 @@ body {
     width: 56%;
     left: 22%; }
 
+  #content #cnt6 .fcloud {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 6vw;
+    -webkit-animation: fcloud 10s linear infinite;
+    -moz-animation: fcloud 10s linear infinite;
+    -o-animation: fcloud 10s linear infinite;
+    animation: fcloud 10s linear infinite; }
+    #content #cnt6 .fcloud p {
+      position: absolute;
+      top: 4%;
+      right: 0;
+      font-weight: 600;
+      color: #666; }
+
   #content #cnt7 .wave .foot {
     bottom: 0;
     left: 20%;
@@ -2510,6 +2573,32 @@ body {
   #content #cnt6 #modal3 video {
     width: 80%;
     left: 10%; }
+
+  #content #cnt6 #modal4 {
+    color: #fff; }
+    #content #cnt6 #modal4 h3 {
+      font-size: 10vw;
+      text-align: center; }
+    #content #cnt6 #modal4 .swiper-container {
+      display: none;
+      width: 100%;
+      height: 100%; }
+      #content #cnt6 #modal4 .swiper-container.on {
+        display: block; }
+    #content #cnt6 #modal4 .swiper-slide {
+      float: left;
+      text-align: center;
+      font-size: 2vw;
+      background: transparent; }
+      #content #cnt6 #modal4 .swiper-slide p {
+        font-size: 3vw;
+        padding: 1vw; }
+      #content #cnt6 #modal4 .swiper-slide span {
+        height: 3vw;
+        line-height: 3vw; }
+      #content #cnt6 #modal4 .swiper-slide img {
+        max-width: 200%;
+        padding: 10vw 0; }
 
   #content #cnt7 .wave .foot {
     bottom: 0;

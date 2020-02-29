@@ -86,6 +86,7 @@ $('.btn_menu').on('click', function () {
 });
 $('#content').on('click',function(){
     $gnb.css({visibility: 'hidden'}).find('ul li.on').removeClass('on');
+    $('.btn_menu').removeClass('active');
 });
 
 
@@ -248,7 +249,20 @@ $('#modal3 a').eq(2).on('click', function (e) {
   $(this).addClass('on').siblings().removeClass('on');
   $('#modal3 li').eq(2).css('display', 'block').siblings().css('display', 'none');
 });
+$('#modal4 .etc a').on('click', function (e) {
+  e.preventDefault(); //a 기본 기능 제한
+  var tgNum = $(this).index()-1;
+  console.log(tgNum);
+  $(this).addClass('on').siblings().removeClass('on');
+  $('.swiper-container').eq(tgNum).addClass('on').siblings().removeClass('on');
+});
 
+  var swiper = new Swiper('.swiper-container', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
 });
 
 $(document).ready(function() {
