@@ -25,7 +25,7 @@ for(i=0;i<bylineArr.length;i++){									// Loop for every letter
 var $gnb = $('#gnb');
   
 //메뉴열기 클릭
-$('.btn_menu').on('click', function () {
+$('.btn_menu').on('click focus', function () {
   if ($(this).hasClass('active')) { //닫기
     $gnb.stop().animate({left: '50%'}, 300, function () {
       $(this).css({visibility: 'hidden'}).find('ul li.on').removeClass('on');
